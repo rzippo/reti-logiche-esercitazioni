@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreti_logiche_esercitazioni=self.webpackChunkreti_logiche_esercitazioni||[]).push([[5815],{9180:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/reti-logiche-esercitazioni/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
