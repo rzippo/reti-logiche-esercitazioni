@@ -3,7 +3,7 @@ exports.id = 130;
 exports.ids = [130];
 exports.modules = {
 
-/***/ 22130:
+/***/ 2130:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
