@@ -15,7 +15,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.28717905.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.2ea22562.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.45f437dd.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.2b1bc870.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -44,7 +44,7 @@ Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel=
 È anche relativamente facile da riprodurre in altri contesti, utilizzando altre forme di visualizzazione e <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer">SSH</a>.</p>
 <p>Tra i file del corso (Teams o <a href="http://docenti.ing.unipi.it/~a080368/Teaching/RetiLogiche/materiale.html" target="_blank" rel="noopener noreferrer">sito web</a>) trovate il pacchetto di installazione con le istruzioni passo-passo per riprodurre l&#x27;ambiente del laboratorio <u>su una macchina Windows 11 con architettura x86</u>: questo perché è pensata e testata per le macchine in laboratorio usate per l&#x27;esame.</p>
 <p>Le stesse istruzioni possono essere adattate per riprodurre un ambiente funzionale in un contesto diverso.</p>
-<figure><img src="/reti-logiche-esercitazioni/img/assembler/ambiente-ssh.drawio.png"><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
+<figure><img src="/reti-logiche-esercitazioni/img/assembler/ambiente/ambiente-ssh.drawio.png"><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="requisiti-minimi">Requisiti minimi<a href="#requisiti-minimi" class="hash-link" aria-label="Link diretto a Requisiti minimi" title="Link diretto a Requisiti minimi">​</a></h3>
 <p>L&#x27;ambiente Linux deve essere in grado di</p>
 <ul>
@@ -64,12 +64,12 @@ Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel=
 Bash (1989) è invece text-oriented, con una <a href="https://mywiki.wooledge.org/BashPitfalls" target="_blank" rel="noopener noreferrer">lunga lista di trappole da saper evitare</a>.</p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma">​</a></h2>
 <p>Una volta eseguiti i passi dell&#x27;installazione, avremo una cartella <code>C:/reti_logiche</code> con contenuto come da figura.</p>
-<img src="c-reti_logiche.png" alt="">
+<img src="/reti-logiche-esercitazioni/img/assembler/ambiente/c-reti_logiche.png" alt="">
 <p>Il file <code>assembler.code-workspace</code> lancerà VS Code, collegandosi alla macchina virtuale WSL e la cartella di lavoro <code>C:/reti_logiche/assembler</code>.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>informazioni</div><div class="admonitionContent_BuS1"><p>Questo file è configurato per l&#x27;ambiente d&#x27;esame, per automatizzare l&#x27;avvio.
 Se si usa un ambiente diverso, il file andrà modificato di conseguenza per funzionare, o si dovrà avviare l&#x27;ambiente &quot;manualmente&quot;.</p></div></div>
 <p>La finestra VS Code che si aprirà sarà simile alla seguente.</p>
-<img src="vs-code-assembler-start.png" alt="">
+<img src="/reti-logiche-esercitazioni/img/assembler/ambiente/vs-code-assembler-start.png" alt="">
 <p>Nell&#x27;angolo in basso a sinistra, <code>WSL: Ubuntu-22.04</code> sta a indicare che l&#x27;editor è correttamente connesso alla macchina virtuale (compare una dicitura simile se si usa SSH).</p>
 <p>I file e cartelle mostrati nell&#x27;immagine sono quelli che ci si deve aspettare dall&#x27;ambiente vuoto.</p>
 <p>Il file <code>test-ambiente.s</code> è un semplice programma per verificare che l&#x27;ambiente funzioni.</p>
