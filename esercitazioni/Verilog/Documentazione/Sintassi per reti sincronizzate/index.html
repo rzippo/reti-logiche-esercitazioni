@@ -15,7 +15,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.28717905.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.3d2e34f1.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.ae67e8a9.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.d387beeb.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -57,7 +57,7 @@ Per noi, <em>no</em>. Useremo questi blocchi in dei modi specifici per indicare<
 Il blocco <code>begin ... end</code> può contenere l&#x27;inizializzazione di più registri.
 Tipicamente, raggrupperemo tutte le inizializzazioni in una <em>descrizione</em>, mentre le terremo separate in una <em>sintesi</em>.</p>
 <p>Un registro può non essere inizializzato: in tal caso, il suo valore sarà <em>non specificato</em>, in Verilog <code>X</code>.
-Ricordiamo che questo significa che il registro <em>ha</em> un qualche valore misurabile, ma non è possibile determinare a priori e in modo univoco quale sarà.</p>
+Ricordiamo che questo significa che il registro <em>ha</em> un qualche valore misurabile, ma non è possibile determinare logicamente a priori e in modo univoco quale sarà.</p>
 <p>In un blocco reset è <em>indifferente</em> l&#x27;uso di <code>=</code> o <code>&lt;=</code> per gli assegnamenti (vedere sezione più avanti).</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Valore assegnato al reset</div><div class="admonitionContent_BuS1"><p>Per la sintassi Verilog, a destra dell&#x27;assegnamento si potrebbe utilizzare qualunque espressione, sia questa costante (per esempio, il letterale <code>1&#x27;b0</code> o un <code>parameter</code>) o variabile (per esempio, il wire <code>w</code>).</p><p>Se pensiamo però all&#x27;equivalente circuitale, <u>hanno senso solo valori costanti</u>.
 Infatti, impostare un valore al reset equivale a collegare opportunamente i piedini <code>preset_</code> e <code>preclear_</code> del registro.</p></div></div>

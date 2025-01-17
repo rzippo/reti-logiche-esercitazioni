@@ -15,7 +15,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.28717905.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.3d2e34f1.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.ae67e8a9.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.d387beeb.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -46,10 +46,10 @@ In un test di successo, vedremo le seguenti stampe:</p>
 <p>La prima stampa ci informa che il file <code>waveform.vcd</code> sta venendo popolato, la seconda ci informa del tempo di simulazione al quale questa è terminata con il comando <code>$finish</code>.
 Alcune versioni di <code>vvp</code> non stampano quest&#x27;ultima di default - non è un problema.</p>
 <p>Le testbench degli esercizi d&#x27;esame stampano a video quando incontrano un errore: un test fallito avrà quindi delle righe in più in mezzo a quelle presentate qui.
-Per esempio, <code>Timeout - waiting for signal failed</code> indica che la simulazione si era bloccata in attesa di un evento che non è mai accaduto, per esempio un segnale di handshake.</p>
+Per esempio, <code>Timeout - waiting for signal failed</code> indica che la simulazione si era bloccata in attesa di un evento che non è mai accaduto, come un segnale di handshake.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Le testbench non sono mai <em>complete</em></div><div class="admonitionContent_BuS1"><p>Se la simulazione non stampa errori, questo indica solo che la testbench  <em>non ne ha trovato alcuno</em>.
 Non implica, invece, che <em>non ci siano</em> errori.
-Questo sia perché è impossibile scrivere una testbench davvero esaustiva di per tutti i possibili percorsi di esecuzione, ma anche perché è facile scrivere Verilog che <em>sembra</em> funzionare bene ma che in realtà usa costrutti che rendono la rete irrealizzabile in hardware.</p><p>È sempre responsabilità dello studente assicurarsi che non ci siano errori.
+Questo sia perché è impossibile scrivere una testbench davvero esaustiva per tutti i possibili percorsi di esecuzione, ma anche perché è facile scrivere Verilog che <em>sembra</em> funzionare bene ma che in realtà usa costrutti che rendono la rete irrealizzabile in hardware.</p><p>È sempre responsabilità dello studente assicurarsi che non ci siano errori.
 In fase di autocorrezione, anche se la testbench non trova nessun errore, è sempre possibile (anzi, dovuto) assicurarsi della correttezza del compito e fare correzioni se necessarie.</p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="waveform-e-debugging">Waveform e debugging<a href="#waveform-e-debugging" class="hash-link" aria-label="Link diretto a Waveform e debugging" title="Link diretto a Waveform e debugging">​</a></h2>
 <p>La simulazione genera un file <code>waveform.vcd</code> contenente l&#x27;evoluzione di tutti i fili e registri nella simulazione.
@@ -65,10 +65,10 @@ Ci interesserà in particolare <code>dut</code> (<em>device under test</em>), ch
 Selezionando poi i vari <code>wire</code> e <code>reg</code> che compaiono sotto, e cliccando &quot;Append&quot;, compariranno nella schermata a destra, dove possiamo vedere l&#x27;evoluzione nel tempo.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="zoom-ordinamento-formattazione">Zoom, ordinamento, formattazione<a href="#zoom-ordinamento-formattazione" class="hash-link" aria-label="Link diretto a Zoom, ordinamento, formattazione" title="Link diretto a Zoom, ordinamento, formattazione">​</a></h3>
 <p>Lo zoom della timeline a destra è regolabile, usando la rotellina del mouse o le lenti d&#x27;ingrandimento in alto a sinistra.</p>
-<p>Cliccando in punti specifici della timeline spostiamo il cursore, cioè la linea rosso verticale.
+<p>Cliccando in punti specifici della timeline spostiamo il cursore, cioè la linea rossa verticale.
 Possiamo quindi leggere nella colonna centrale il valore di ciascun segnale all&#x27;istante dove si trova il cursore.</p>
 <p>I segnali nella schermata principale sono ordinabili, per esempio è in genere utile spostare <code>clock</code> e <code>STAR</code> in alto.
-Di default, sono formattati come segnali binari, composti se da un bit, o in notazione esadecimale, se da più bit.
+Di default, sono formattati come segnali binari, se composti da un bit, o in notazione esadecimale, se da più bit.
 Cliccando col destro su un segnale è possibile cambiare la formattazione in diversi modi, incluso decimale.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="non-specificati-e-alta-impedenza">Non specificati e alta impedenza<a href="#non-specificati-e-alta-impedenza" class="hash-link" aria-label="Link diretto a Non specificati e alta impedenza" title="Link diretto a Non specificati e alta impedenza">​</a></h3>
 <p>Prestare particolare attenzione ai valori non specificati (<code>X</code>) e alta impedenza (<code>Z</code>), che sono spesso sintomi di errori, per esempio per un filo di input non collegato.</p>
@@ -79,10 +79,10 @@ Cliccando col destro su un segnale è possibile cambiare la formattazione in div
 <p>Questo approaccio è però inefficiente, dato che si dovrà ogni volta riselezionare i fili, riformattarne i valori, ritrovare il punto d&#x27;errore che si stava studiando.</p>
 <p>Il pulsante <em>Reload</em>, indicato con l&#x27;icona 🔁, permette di ricaricare il file <code>waveform.vcd</code> senza chiudere e riaprire il programma, e mantentendo tutte le selezioni fatte.</p>
 <p>È per questo una buona idea utilizzare una delle seguenti strategie:</p>
-<ul>
+<ol>
 <li>usare due terminali, uno dedicato a <code>iverilog</code> e <code>vvp</code>, l&#x27;altro a <code>gtkwave</code>;</li>
 <li>lanciare il comando <code>gtkwave</code> in background. Nell&#x27;ambiente Windows all&#x27;esame, questo si può fare aggiungendo un <code>&amp;</code> in fondo: <code>gtkwave waveform.vcd &amp;</code>.</li>
-</ul>
+</ol>
 <p>In entrambi i casi, otteniamo di poter rieseguire la simulazione mentre GTKWave è aperto, e poter quindi sfruttare il pulsante Reload.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Se l&#x27;operatore <code>&amp;</code> non funziona</div><div class="admonitionContent_BuS1"><p>In alcune installazioni di Powershell l&#x27;operatore <code>&amp;</code> non funziona.
 L&#x27;operatore è un semplice alias per <code>Start-Job</code>, e si può ovviare al problema usando questo comando per esteso:</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Start-Job { gtkwave waveform.vcd }</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copia il codice negli appunti" title="Copia" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>L&#x27;operatore è documentato <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.4#background-operator-" target="_blank" rel="noopener noreferrer">qui</a>.</p></div></div>
