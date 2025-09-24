@@ -16,8 +16,8 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.cb1a293c.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.2743eca9.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.3f994351.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.8a81596d.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.df2f4636.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -58,12 +58,28 @@ Nel corso, continuiamo ad usare l&#x27;istruction set a 32 bit perché</p><ol>
 In precedenza si usava MS-DOS, un sistema del 1981 facilmente emulabile, ma molto limitato data l&#x27;età.</p></div></div>
 <p>Nell&#x27;ambiente d&#x27;esame, si usa un Ubuntu 22.04 virtualizzato tramite <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener noreferrer">WSL</a> su macchina Windows 11.
 Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> con l&#x27;<a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener noreferrer">estensione per lo sviluppo in WSL</a>.</p>
-<figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-wsl.drawio.png"><figcaption><p>Schema dell&#x27;ambiente usato all&#x27;esame.</p></figcaption></figure>
+<figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-wsl.drawio.png" style="max-width:min(100%, 24rem)" alt="
+Lo schema mostra un host Windows 11 (x86), che esegue sia l&#x27;editor VS Code che l&#x27;ambiente virtuale WSL2 (x86).
+All&#x27;interno di WSL2, il sistema operativo eseguito è Ubuntu 22.04.
+All&#x27;interno di Ubuntu, vi è il terminale in cui assembliamo ed eseguiamo i programmi. 
+L&#x27;editor VS Code si collega direttamente al sistema virtualizzato, mostrando il terminale di Ubuntu.
+" title="
+L&#x27;host Windows 11 esegue sia l&#x27;editor VS Code che l&#x27;ambiente virtuale WSL2 (x86).
+L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il terminale mostrato nell&#x27;editor è di Ubuntu, e non di Windows.
+"><figcaption><p>Schema dell&#x27;ambiente usato all&#x27;esame.</p></figcaption></figure>
 <p>Questo ci permette di mantenere un ambiente grafico moderno mentre si lavora con un terminare Linux virtualizzato.
 È anche relativamente facile da riprodurre in altri contesti, utilizzando altre forme di visualizzazione e <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer">SSH</a>.</p>
 <p>Tra i file del corso (Teams o <a href="http://docenti.ing.unipi.it/~a080368/Teaching/RetiLogiche/materiale.html" target="_blank" rel="noopener noreferrer">sito web</a>) trovate il pacchetto di installazione con le istruzioni passo-passo per riprodurre l&#x27;ambiente del laboratorio <u>su una macchina Windows 11 con architettura x86</u>: questo perché è pensata e testata per le macchine in laboratorio usate per l&#x27;esame.</p>
 <p>Le stesse istruzioni possono essere adattate per riprodurre un ambiente funzionale in un contesto diverso.</p>
-<figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-ssh.drawio.png"><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
+<figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-ssh.drawio.png" style="max-width:min(100%, 38rem)" alt="
+Lo schema mostra due host distinti.
+Il primo è l&#x27;host che esegue VS Code, che può essere di qualunque tipo e architettura.
+Il secondo è l&#x27;host Linux (di qualunque distribuzione) di architettura x86, che esegue il terminale.
+L&#x27;editor VS Code si collega al terminale dell&#x27;host linux utilizzando SSH.
+" title="
+I due host sono distinti, permettendo di eseguire sistemi operativi diversi.
+L&#x27;unico vincolo è la configurazione della connessione via SSH.
+"><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="requisiti-minimi">Requisiti minimi<a href="#requisiti-minimi" class="hash-link" aria-label="Link diretto a Requisiti minimi" title="Link diretto a Requisiti minimi">​</a></h3>
 <p>L&#x27;ambiente Linux deve essere in grado di</p>
 <ul>
@@ -72,7 +88,7 @@ Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel=
 <li>Eseguire programmi x86</li>
 <li>Debuggarli usando <code>gdb</code></li>
 </ul>
-<p>Su Ubuntu 22.04, i pacchetti da installare sono</p>
+<p>Per far questo su Ubuntu 22.04, i pacchetti da installare sono</p>
 <ul>
 <li><code>build-essential</code></li>
 <li><code>gcc-multilib</code></li>
@@ -83,12 +99,12 @@ Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel=
 Bash (1989) è invece text-oriented, con una <a href="https://mywiki.wooledge.org/BashPitfalls" target="_blank" rel="noopener noreferrer">lunga lista di trappole da saper evitare</a>.</p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma">​</a></h2>
 <p>Una volta eseguiti i passi dell&#x27;installazione, avremo una cartella <code>C:/reti_logiche</code> con contenuto come da figura.</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/c-reti_logiche.png" alt="">
+<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/c-reti_logiche.png" style="max-width:min(100%, 14rem)" alt="Cartelle: assembler, verilog, dispense. Files: assembler.code-workspace, verilog.code-workspace, Istruzioni.txt">
 <p>Il file <code>assembler.code-workspace</code> lancerà VS Code, collegandosi alla macchina virtuale WSL e la cartella di lavoro <code>C:/reti_logiche/assembler</code>.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>informazioni</div><div class="admonitionContent_BuS1"><p>Questo file è configurato per l&#x27;ambiente d&#x27;esame, per automatizzare l&#x27;avvio.
 Se si usa un ambiente diverso, il file andrà modificato di conseguenza per funzionare, o si dovrà avviare l&#x27;ambiente &quot;manualmente&quot;.</p></div></div>
 <p>La finestra VS Code che si aprirà sarà simile alla seguente.</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-start.png" alt="">
+<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-start.png" style="max-width:min(100%, 44rem)" alt="Una finestra di VS Code, che riporta &#x27;assembler (Workspace)&#x27; nella barra del titolo, il contenuto della cartella assembler nel pannello a sinistra, e &#x27;WSL: Ubuntu-22.04&#x27; in basso a sinistra.">
 <p>Nell&#x27;angolo in basso a sinistra, <code>WSL: Ubuntu-22.04</code> sta a indicare che l&#x27;editor è correttamente connesso alla macchina virtuale (compare una dicitura simile se si usa SSH).</p>
 <p>I file e cartelle mostrati nell&#x27;immagine sono quelli che ci si deve aspettare dall&#x27;ambiente vuoto.</p>
 <p>Il file <code>test-ambiente.s</code> è un semplice programma per verificare che l&#x27;ambiente funzioni.</p>
@@ -96,15 +112,18 @@ Se si usa un ambiente diverso, il file andrà modificato di conseguenza per funz
 <p>Apriamo quindi un terminale in VS Code (Terminale &gt; Nuovo Terminale).
 Per poter lanciare gli script, il terminale deve essere Powershell, non bash.</p>
 <p>Non così:</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-bash.png" alt="">
+<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-bash.png" style="max-width:min(100%, 44rem)" alt="Il pannello del terminale di VS Code, con la dicitura &#x27;bash - assembler&#x27; in alto a destra.">
 <p>Ma così:</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-pwsh.png" alt="">
-<p>Per cambiare shell si può usare il bottone <code>+</code> sulla sinistra, o lanciare il comando <code>pwsh</code> senza argomenti.</p>
+<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-pwsh.png" style="max-width:min(100%, 44rem)" alt="Il pannello del terminale di VS Code, con la dicitura &#x27;pwsh - assembler&#x27; in alto a destra.">
+<p>Per cambiare shell si può usare il bottone <code>+</code> sulla destra, o lanciare il comando <code>pwsh</code> senza argomenti.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>informazioni</div><div class="admonitionContent_BuS1"><p>Se si preferisce, in VS Code si può aprire un terminale anche come tab dell&#x27;editor, o spostandolo al lato anziché in basso.</p></div></div>
 <p>A questo punto possiamo lanciare il comando per assemblare il programma di test.</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">./assemble.ps1 ./test-ambiente.s</span><br></span></code></pre></div></div>
 <p>Dovremmo adesso vedere, tra i file, il binario <code>test-ambiente</code>.
 Lo possiamo eseguire con <code>./test-ambiente</code>, che dovrebbe stampare <code>Ok.</code>.</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-test-ambiente.png" alt=""></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Pagina del documento"><a class="pagination-nav__link pagination-nav__link--prev" href="/reti-logiche-esercitazioni/2024-25/category/assembler"><div class="pagination-nav__sublabel">Precedente</div><div class="pagination-nav__label">Assembler</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/reti-logiche-esercitazioni/2024-25/category/esercitazioni"><div class="pagination-nav__sublabel">Successivo</div><div class="pagination-nav__label">Esercitazioni</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#attenzione-allarchitettura" class="table-of-contents__link toc-highlight">Attenzione all&#39;architettura</a></li><li><a href="#struttura-dellambiente" class="table-of-contents__link toc-highlight">Struttura dell&#39;ambiente</a><ul><li><a href="#requisiti-minimi" class="table-of-contents__link toc-highlight">Requisiti minimi</a></li></ul></li><li><a href="#lanciare-lambiente-e-primo-programma" class="table-of-contents__link toc-highlight">Lanciare l&#39;ambiente e primo programma</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Raffaele Zippo. Built with Docusaurus.</div></div></div></footer></div>
+<img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/vs-code-assembler-terminal-test-ambiente.png" style="max-width:min(100%, 36rem)" alt="
+Sequenza di comandi: &#x27;./assembler.ps1 ./test-ambiente.s&#x27; assembla il programma di test, &#x27;./test-ambiente&#x27; lo esegue.
+Il programma stampa &#x27;Ok.&#x27; e termina.
+"></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Pagina del documento"><a class="pagination-nav__link pagination-nav__link--prev" href="/reti-logiche-esercitazioni/2024-25/category/assembler"><div class="pagination-nav__sublabel">Precedente</div><div class="pagination-nav__label">Assembler</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/reti-logiche-esercitazioni/2024-25/category/esercitazioni"><div class="pagination-nav__sublabel">Successivo</div><div class="pagination-nav__label">Esercitazioni</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#attenzione-allarchitettura" class="table-of-contents__link toc-highlight">Attenzione all&#39;architettura</a></li><li><a href="#struttura-dellambiente" class="table-of-contents__link toc-highlight">Struttura dell&#39;ambiente</a><ul><li><a href="#requisiti-minimi" class="table-of-contents__link toc-highlight">Requisiti minimi</a></li></ul></li><li><a href="#lanciare-lambiente-e-primo-programma" class="table-of-contents__link toc-highlight">Lanciare l&#39;ambiente e primo programma</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Raffaele Zippo. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

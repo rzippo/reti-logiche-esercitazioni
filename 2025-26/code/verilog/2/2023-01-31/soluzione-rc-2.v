@@ -49,7 +49,7 @@ module MUL8(x, y, m);
     assign {s1h, s1l} = m3_s0h;
 
     wire [3:0] s1h_c0;
-    add #( .N(4) ) a2 (
+    add #( .N(4) ) a1 (
         .x(s1h), .y(4'b0), .c_in(c0),
         .s(s1h_c0)
     );

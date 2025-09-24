@@ -16,8 +16,8 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.cb1a293c.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.2743eca9.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.3f994351.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.8a81596d.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.df2f4636.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -197,7 +197,12 @@ Nella parte controllo, invece, ci sarà solo il registro <code>STAR</code> e la 
 <p>Secondo il modello a microindirizzi, la parte controllo è implementata come una ROM che usa il registro <code>STAR</code> come <em>microindirizzo</em>, e fornisce in uscita le variabili di controllo per la parte operativa così come <code>c_eff</code>, <code>m_true</code> e <code>m_false</code>.
 Questi ultimi tre elementi, insieme alle variabili di condizionamento in ingresso dalla parte operativa, sono utilizzati con dei multiplexer in cascata per determinare lo stato successivo della rete.
 Lo schema circuitale è il seguente.</p>
-<img src="/reti-logiche-esercitazioni/2024-25/img/verilog/4/rom-microindirizzi.drawio.png">
+<img src="/reti-logiche-esercitazioni/2024-25/img/verilog/4/rom-microindirizzi.drawio.png" style="max-width:min(100%, 44rem)" alt="
+Schema di una ROM basata su microindirizzi.
+La ROM prende in ingresso STAR, e produce le variabili di comando, &#x27;c_eff&#x27;, &#x27;m_true&#x27; e &#x27;m_false&#x27;.
+Lo stato successivo, &#x27;next_addr&#x27;, è determinato da un multiplexer che prende in ingresso &#x27;m_true&#x27; e &#x27;m_false&#x27; ed è pilotato dalla variabile di condizionamento efficace.
+Questa è prodotta da un&#x27;altro multiplexer, che prende in ingresso le variabili di condizionamento da &#x27;c0&#x27; a &#x27;cN&#x27; ed è pilotato da &#x27;c_eff&#x27;.
+">
 <p>Fare la sintesi direttamente come ROM è possibile, ma è ben più tedioso e difficile da debuggare.
 Per questo manteniamo il linguaggio di trasferimento tra registri per indicare in Verilog il comportamento di STAR, e scriviamo invece come commento nel codice una tabella che mostri il contenuto della ROM.</p>
 <p>Per evitare ogni ambiguità, si comincia specificando codifiche binarie per gli stati e i <em>nomi</em> delle variabili di comando.
