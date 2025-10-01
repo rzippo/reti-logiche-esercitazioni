@@ -4,7 +4,7 @@
   <ShortName>Esercitazioni di Reti Logiche</ShortName>
   <Description>Search Esercitazioni di Reti Logiche</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/favicon.ico</Image>
+  <Image width="16" height="16" type="image/x-icon">https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/favicon.png</Image>
   <Url type="text/html" method="get" template="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/search?q={searchTerms}"/>
   <Url type="application/opensearchdescription+xml" rel="self" template="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/opensearch.xml" />
   <moz:SearchForm>https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/</moz:SearchForm>
