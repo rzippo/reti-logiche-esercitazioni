@@ -16,8 +16,8 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e959b96b.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.43c780bb.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.8fc37d24.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.bc45e19b.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.bfea36da.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -36,7 +36,7 @@ L&#x27;architettura x86 è stata rimpiazzata nel tempo da x64, a 64 bit, che è 
 Altre architetture (in particolare, ARM) hanno istruzioni, registri e funzionamento completamente diversi e non sono compatibili con x86.
 Usare una macchina con architettura diversa è inevitabilmente fonte di problemi.</p>
 <p>L&#x27;ambiente fornito funziona con Linux <code>x86</code> (o <code>x64</code> o <code>amd64</code>, che significano la stessa cosa).
-Non funziona invece per processori <code>arm64</code>, come quelli usati da MAC o Windows on ARM.</p>
+Non funziona invece per processori <code>arm64</code>, come quelli usati da Mac o Windows on ARM.</p>
 <p>Da una parte, si potrebbe pensare di esercitarsi scrivendo assembler per la propria architettura, anziché quella usata nel corso.
 Sorgono diversi problemi:</p>
 <ul>
@@ -49,13 +49,13 @@ Sorge come principale problema l&#x27;ergonomicità ed efficienza di questa solu
 <p>Per chi ha una macchina ARM, sarà necessario trovare soluzioni di virtualizzazione o usare un&#x27;altra macchina dedicata (va bene qualunque cosa di qualunque potenza, purché <code>x86</code>).
 In ogni caso, <em>non offriamo nessun supporto diretto</em> a tali macchine.
 Lo ribadisco in rosso, perché chiesto spesso.</p>
-<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span><u>Nessun supporto diretto</u> per MAC con ARM</div><div class="admonitionContent_BuS1"><p>Non testiamo né supportiamo ambienti per MAC con ARM, che non abbiamo a disposizione.
+<div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span><u>Nessun supporto diretto</u> per Mac con ARM</div><div class="admonitionContent_BuS1"><p>Non testiamo né supportiamo ambienti per Mac con ARM, che non abbiamo a disposizione.
 <em>Ci è stato detto</em> che <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer">UTM</a> può emulare l&#x27;architettura x86, affermazione che riportiamo senza alcuna garanzia.
 Non risponderemo a ulteriori domande a riguardo, soprattutto se parte delle <a href="/reti-logiche-esercitazioni/esercitazioni/Assembler/Problemi comuni">domande frequenti</a>.</p></div></div>
 <p>Oltre a questioni di architettura, abbiamo anche il sistema operativo, che è rilevante per gestire input e output da terminale.
 I programmi che scriveremo ed eseguiremo, così come quelli utilizzati per assemblare, gireranno in un terminale Linux.
 Nei pacchetti forniti e in sede di esame, si usa in particolare Ubuntu 24.04.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Perché Linux?</div><div class="admonitionContent_BuS1"><p>Perché è molto più facile virtualizzare un ambiente Linux moderno in Windows o MAC che il contrario.
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Perché Linux?</div><div class="admonitionContent_BuS1"><p>Perché è molto più facile virtualizzare un ambiente Linux moderno in Windows o Mac che il contrario.
 In precedenza si usava MS-DOS, un sistema del 1981 facilmente emulabile, ma molto limitante data l&#x27;età.</p></div></div>
 <p>Per assemblare, si usa <code>gcc</code>, per debuggare <code>gdb</code>.
 Per usarli però sono necessari comandi <em>lunghi</em>, che semplifichiamo usando script Powershell <code>assemble.ps1</code> e <code>debug.ps1</code>.</p>
@@ -100,7 +100,7 @@ L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il ter
 <p>Il pacchetto dell&#x27;ambiente contiene le istruzioni passo passo per installare e configurare la macchina virtuale <u>su una macchina Windows 11 con architettura x86</u>.</p>
 <p>Per l&#x27;ambiente Verilog, invece, ci sono sia installer precompilati <a href="https://bleyer.org/icarus/" target="_blank" rel="noopener noreferrer">qui</a> che codice sorgente <a href="https://github.com/steveicarus/iverilog" target="_blank" rel="noopener noreferrer">qui</a> e <a href="https://github.com/gtkwave/gtkwave" target="_blank" rel="noopener noreferrer">qui</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="ambiente-per-linux-nativo-o-devcontainer">Ambiente per Linux nativo <em>o</em> devcontainer<a href="#ambiente-per-linux-nativo-o-devcontainer" class="hash-link" aria-label="Link diretto a ambiente-per-linux-nativo-o-devcontainer" title="Link diretto a ambiente-per-linux-nativo-o-devcontainer" translate="no">​</a></h2>
-<p><a href="/reti-logiche-esercitazioni/2025-26/ambiente/reti-logiche-linux-devcontainer-2025-10-01.zip" target="_blank" rel="noopener noreferrer">Download</a></p>
+<p><a href="/reti-logiche-esercitazioni/2025-26/ambiente/reti-logiche-linux-devcontainer-2025-10-06.zip" target="_blank" rel="noopener noreferrer">Download</a></p>
 <p>Questo pacchetto supporta due scenari: una macchina con Linux x64, oppure <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer">devcontainers</a> tramite Docker.</p>
 <p>Il pacchetto contiene le cartelle <code>assembler</code> e <code>verilog</code> con i file necessari per scrivere codice.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="utilizzo-nativo">Utilizzo nativo<a href="#utilizzo-nativo" class="hash-link" aria-label="Link diretto a Utilizzo nativo" title="Link diretto a Utilizzo nativo" translate="no">​</a></h3>

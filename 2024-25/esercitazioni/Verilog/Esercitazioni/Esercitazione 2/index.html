@@ -16,8 +16,8 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e959b96b.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.43c780bb.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.8fc37d24.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.bc45e19b.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.bfea36da.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -92,7 +92,7 @@ Questo vuol dire che possiamo collocare nella nostra rete sommatori di qualunque
 Una rete che determini il massimo tra due numeri dovrà necessariamente passare da una comparazione tra i due.
 Partiamo dall&#x27;idea di avere un comparatore il cui risultato fa da selettore per un multiplexer.</p>
 <img src="/reti-logiche-esercitazioni/2024-25/img/verilog/2/max-sintesi-rc-1.drawio.png" style="max-width:min(100%, 30rem)" alt="
-Schema di una rete che calcola il massimo tra gli ingressi &#x27;x&#x27; e &#x27;y&#x27;, usando un comparatore ed un multiplexer.
+Schema di una rete che calcola il massimo tra gli ingressi &#x27;x&#x27; e &#x27;y&#x27;, usando un comparatore e un multiplexer.
 Il comparatore prende &#x27;x&#x27; e &#x27;y&#x27; in ingresso, la sua uscita &#x27;min&#x27; è 1 se x è minore di y.
 Tale uscita è utilizzata per guidare un multiplexer, che ha &#x27;x&#x27; in corrispondenza di &#x27;0&#x27; e &#x27;y&#x27; in corrispondenza di 1.
 L&#x27;uscita del multiplexer corrisponde all&#x27;uscita &#x27;max&#x27; della rete.
@@ -110,7 +110,7 @@ L&#x27;uscita &#x27;diff&#x27; del sottrattore non è di interesse, quindi non l
 <img src="/reti-logiche-esercitazioni/2024-25/img/verilog/2/max-sintesi-rc-3.drawio.png" style="max-width:min(100%, 34rem)" alt="
 Schema della rete precedente, mostrando come si ottiene il sottrattore per naturali a partire da un sommatore.
 Il minuendo &#x27;x&#x27; è collegato direttamente al sommatore come primo addendo.
-Il sottraendo &#x27;y&#x27; è invece collegato ad una porta NOT, l&#x27;uscita di tale NOT è collegata al sommatore addendo.
+Il sottraendo &#x27;y&#x27; è invece collegato a una porta NOT, l&#x27;uscita di tale NOT è collegata al sommatore addendo.
 Similmente, &#x27;c_in&#x27; si ottiene negando &#x27;b_in&#x27;, e in uscita &#x27;b_out&#x27; si ottiene negando &#x27;c_out&#x27;.
 ">
 <p>Abbiamo quindi una rete sintetizzabile: usiamo solo dei not, un multiplexer e un sommatore a 8 bit, quest&#x27;ultimo sintetizzabile perché parte della libreria <code>reti_standard.v</code>.</p>
@@ -132,7 +132,7 @@ Anche se matematicamente è lo stesso problema, cambia abbastanza come dovremmo 
 Ciascun sottoprodotto può essere calcolato indipendentemente e produce un risultato su 2 cifre (8 bit).
 Questi sottoprodotti venivano shiftati a sinistra di 0, 1 o 2 cifre.</p>
 <p>In Assembler, dopo questo passaggio si era già pronti a fare la somma su 4 cifre: questo perché i registri del processore hanno numeri di bit fissi, e le istruzioni a disposizione operano su questi numeri di bit.
-In Verilog, dove descriviamo hardware, i numeri di bit sono decisi da noi, ed è normale avere valori su numeri di bit diversi che non possiamo passare ad un sommatore senza prima <em>estenderli</em>.</p>
+In Verilog, dove descriviamo hardware, i numeri di bit sono decisi da noi, ed è normale avere valori su numeri di bit diversi che non possiamo passare a un sommatore senza prima <em>estenderli</em>.</p>
 <p>In altre parole, dobbiamo occuparci tanto degli zeri aggiunti a destra (per shift) quanto di quelli aggiunti a sinistra (per estensione) prima di poter sommare i sottoprodotti tra di loro.
 Una volta ottenuti i quattro sottoprodotti, tutti su 4 cifre, possiamo sommarli tra loro. Possiamo usare tre sommatori a 4 cifre (16 bit) per farlo.
 Otteniamo quindi lo schema seguente.</p>
@@ -165,7 +165,7 @@ Per vedere meglio come procedere, scomponiamo anche i sottoprodotti in parte alt
 <li>sia <code>s0</code> la somma <code>m1 + m2 + m0h</code>, scomposto in <code>{s0h, s0l} = s0</code>, e <code>c0</code> il suo eventuale riporto uscente. Allora <code>m[7:4] = s0l</code>, e <code>s0h</code> può essere collegato all&#x27;input <code>c</code> di <code>ma3</code>.</li>
 <li>sia <code>s1</code> la somma <code>m3 + s0h</code>, scomposto in <code>{s1h, s1l} = s1</code>. Allora <code>m[11:8] = s1l</code>, mentre <code>m[15:12] = s1h + c0</code>.</li>
 </ul>
-<p>Per realizzare questo ci serve, oltre ai moltiplicatori, un sommatore a 8 bit per <code>s0</code>, ed un incrementatore a 4 bit per <code>s1h + c0</code>.
+<p>Per realizzare questo ci serve, oltre ai moltiplicatori, un sommatore a 8 bit per <code>s0</code>, e un incrementatore a 4 bit per <code>s1h + c0</code>.
 Lo schema che lo rappresenta è il seguente.</p>
 <img src="/reti-logiche-esercitazioni/2024-25/img/verilog/2/mul8-rc-2.drawio.png" style="max-width:min(100%, 44rem)" alt="
 Schema del moltiplicatore a 8 bit ottimizzato.

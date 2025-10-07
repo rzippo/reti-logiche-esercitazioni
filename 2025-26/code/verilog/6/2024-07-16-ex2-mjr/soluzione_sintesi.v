@@ -192,7 +192,7 @@ module PC(
     // Per distinguere questi salti da quelli guidati da MJR, introduciamo un altro multiplexer guidato dal campo m-type della ROM
     // Questo varrà 0 per i salti incondizionati o a due vie e 1 per i salti guidati da MJR.
 
-    // Per i salti incondizionati o a due vie, si utilizzano i campi m-addr T ed m-addr F della ROM, ed un multiplexer guidato da una delle variabile di condizionamento prodotte dalla parte operativa.
+    // Per i salti incondizionati o a due vie, si utilizzano i campi m-addr T ed m-addr F della ROM, e un multiplexer guidato da una delle variabile di condizionamento prodotte dalla parte operativa.
     // Dato che, in questo caso, abbiamo una sola variabile di condizionamento, non c'è bisogno di distinguerle tramite un multiplexer ed il campo c_eff della ROM, che quindi omettiamo.
 
     /* 
