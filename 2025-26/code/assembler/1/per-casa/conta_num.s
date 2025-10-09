@@ -1,4 +1,4 @@
-# contare il numero di occorrenze del numero nell'array, e stamparlo
+# Contare il numero di occorrenze del numero nell'array, e stamparlo.
 
 .include "./files/utility.s"
 

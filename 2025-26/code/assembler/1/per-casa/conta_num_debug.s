@@ -1,6 +1,6 @@
-# contare il numero di occorrenze del numero nell'array, e stamparlo
+# Contare il numero di occorrenze del numero nell'array, e stamparlo.
 
-# la soluzione proposta ha uno o piu' errori: trovarli e correggerli.
+# La soluzione proposta ha uno o piu' errori: trovarli e correggerli.
 
 .include "./files/utility.s"
 
