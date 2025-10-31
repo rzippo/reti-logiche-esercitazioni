@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-2024-25 docs-doc-page docs-doc-id-esercitazioni/Assembler/Documentazione/Debugger gdb" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
+<meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Debugger gdb | Esercitazioni di Reti Logiche</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Documentazione/Debugger gdb"><meta data-rh="true" property="og:locale" content="it"><meta data-rh="true" name="docusaurus_locale" content="it"><meta data-rh="true" name="docsearch:language" content="it"><meta data-rh="true" name="docusaurus_version" content="2024-25"><meta data-rh="true" name="docusaurus_tag" content="docs-default-2024-25"><meta data-rh="true" name="docsearch:version" content="2024-25"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-2024-25"><meta data-rh="true" property="og:title" content="Debugger gdb | Esercitazioni di Reti Logiche"><meta data-rh="true" name="description" content="Riferimento rapido per i comandi del debugger gdb"><meta data-rh="true" property="og:description" content="Riferimento rapido per i comandi del debugger gdb"><link data-rh="true" rel="icon" href="/reti-logiche-esercitazioni/img/favicon.png"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Documentazione/Debugger gdb"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Documentazione/Debugger gdb" hreflang="it"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Documentazione/Debugger gdb" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://X6QFHIGLL7-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assembler","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/category/assembler"},{"@type":"ListItem","position":2,"name":"Documentazione","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/category/documentazione"},{"@type":"ListItem","position":3,"name":"Debugger gdb","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Documentazione/Debugger gdb"}]}</script><link rel="alternate" type="application/rss+xml" href="/reti-logiche-esercitazioni/blog/rss.xml" title="Esercitazioni di Reti Logiche RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/reti-logiche-esercitazioni/blog/atom.xml" title="Esercitazioni di Reti Logiche Atom Feed">
 
@@ -15,9 +15,9 @@
 
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e959b96b.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a3e2c5b4.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.23c25b27.js" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.60dc49c0.css">
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.3baf3929.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.40df8b3d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -31,13 +31,13 @@ I breakpoints ci permettono di eseguire rapidamente le parti del programma che n
 <p>Quella che segue è comunque una presentazione sintetica e semplificata.
 Per altre opzioni e funzionalità del debugger, vedere la documentazione ufficiale o il comando <code>help</code>.</p>
 </blockquote>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="controllo-dellesecuzione">Controllo dell&#x27;esecuzione<a href="#controllo-dellesecuzione" class="hash-link" aria-label="Link diretto a Controllo dell&#x27;esecuzione" title="Link diretto a Controllo dell&#x27;esecuzione" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="controllo-dellesecuzione">Controllo dell&#x27;esecuzione<a href="#controllo-dellesecuzione" class="hash-link" aria-label="Link diretto a Controllo dell&#x27;esecuzione" title="Link diretto a Controllo dell&#x27;esecuzione" translate="no">​</a></h2>
 <p>Per istruzione corrente si intende <em>la prossima da eseguire</em>.
 Quando il debugger si ferma a un&#x27;istruzione, si ferma <em>prima</em> di eseguirla.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>frame</td><td>f</td><td>f</td><td>Mostra l&#x27;istruzione corrente.</td></tr><tr><td>list</td><td>l</td><td>l</td><td>Mostra il sorgente attorno all&#x27;istruzione corrente.</td></tr><tr><td>break</td><td>b</td><td>b <em>label</em></td><td>Imposta un breakpoint alla prima istruzione dopo <em>label</em>.</td></tr><tr><td>continue</td><td>c</td><td>c</td><td>Prosegue l&#x27;esecuzione del programma fino al prossimo breakpoint.</td></tr><tr><td>step</td><td>s</td><td>s</td><td>Esegue l&#x27;istruzione corrente, fermandosi immediatamente dopo. Se l&#x27;istruzione corrente è una <code>call</code>, l&#x27;esecuzione si fermerà alla prima istruzione del sottoprogramma chiamato.</td></tr><tr><td>next</td><td>n</td><td>n</td><td>Esegue l&#x27;istruzione corrente, fermandosi all&#x27;istruzione successiva del sottoprogramma corrente. Se l&#x27;istruzione corrente è una <code>call</code>, l&#x27;esecuzione si fermerà	<em>dopo</em> il <code>ret</code> di del sottoprogramma chiamato. Nota: aggiungere una <code>nop</code> dopo ogni <code>call</code> prima di una nuova label.</td></tr><tr><td>finish</td><td>fin</td><td>fin</td><td>Continua l&#x27;esecuzione fino all&#x27;uscita dal sottoprogramma corrente (<code>ret</code>). L&#x27;esecuzione si fermerà alla prima istruzione dopo la <code>call</code>.</td></tr><tr><td>run</td><td>r</td><td>r</td><td>Avvia (o riavvia) l&#x27;esecuzione del programma. Chiede conferma.</td></tr><tr><td>quit</td><td>q</td><td>q</td><td>Esce dal debugger. Chiede conferma.</td></tr></tbody></table>
 <p>I seguenti comandi sono <em>definiti ad hoc nell&#x27;ambiente del corso</em>, e non sono quindi tipici comandi di <code>gdb</code>.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>rrun</td><td>rr</td><td>rr</td><td>Avvia (o riavvia) l&#x27;esecuzione del programma, senza chiedere conferma.</td></tr><tr><td>qquit</td><td>qq</td><td>qq</td><td>Esce dal debugger, senza chiedere conferma.</td></tr></tbody></table>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="problemi-con-next">Problemi con <code>next</code><a href="#problemi-con-next" class="hash-link" aria-label="Link diretto a problemi-con-next" title="Link diretto a problemi-con-next" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="problemi-con-next">Problemi con <code>next</code><a href="#problemi-con-next" class="hash-link" aria-label="Link diretto a problemi-con-next" title="Link diretto a problemi-con-next" translate="no">​</a></h3>
 <p>Si possono talvolta incontrare problemi con il comportamento di <code>next</code>, che derivano da come questa è definita e implementata.
 Il comando <code>next</code> distingue i <em>frame</em> come le sequenze di istruzioni che vanno da una label alla successiva.
 Il suo comportamento è, in realtà, di continuare l&#x27;esecuzione finché non incontra di nuovo una nuova istruzione nello stesso <em>frame</em> di partenza.</p>
@@ -47,62 +47,62 @@ Quel che ne consegue è che il comando <code>next</code> si comporta come <code>
 <p>Per ovviare a questo problema, è una buona abitudine quella di aggiungere una <code>nop</code> dopo ciascuna <code>call</code>.
 Tale <code>nop</code>, appartenendo allo stesso <em>frame</em> <code>punto_1</code>, farà regolarmente sospendere l&#x27;esecuzione.</p>
 <div class="language-assembler codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-assembler codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token label function" style="color:#d73a49">punto_1:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token op-code keyword" style="color:#00009f">call</span><span class="token plain"> newline</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token op-code keyword" style="color:#00009f">nop</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token label function" style="color:#d73a49">punto_2:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ...</span><br></span></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ispezione-dei-registri">Ispezione dei registri<a href="#ispezione-dei-registri" class="hash-link" aria-label="Link diretto a Ispezione dei registri" title="Link diretto a Ispezione dei registri" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ispezione-dei-registri">Ispezione dei registri<a href="#ispezione-dei-registri" class="hash-link" aria-label="Link diretto a Ispezione dei registri" title="Link diretto a Ispezione dei registri" translate="no">​</a></h2>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>info registers</td><td>i r</td><td>i r</td><td>Mostra lo stato di (quasi) tutti i registri. Non mostra separatamente i sotto-registri, come <code>%ax</code>.</td></tr><tr><td>info registers</td><td>i r</td><td>i r <em>reg</em></td><td>Mostra lo stato del registro <em>reg</em> specificato. <em>reg</em> va specificato in minuscolo senza caratteri preposti, per esempio <code>i r eax</code>. Si possono specificare anche sotto-registri, come <code>%ax</code>, e più registri separati da spazio.</td></tr></tbody></table>
 <p><code>gdb</code> supporta viste alternative con il comando <code>layout</code> che mettono più informazioni a schermo.
 In particolare, <code>layout regs</code> mostra l&#x27;equivalente di <code>i r</code> e <code>l</code>, evidenziando gli elementi che cambiano ad ogni step di esecuzione.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ispezione-della-memoria">Ispezione della memoria<a href="#ispezione-della-memoria" class="hash-link" aria-label="Link diretto a Ispezione della memoria" title="Link diretto a Ispezione della memoria" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ispezione-della-memoria">Ispezione della memoria<a href="#ispezione-della-memoria" class="hash-link" aria-label="Link diretto a Ispezione della memoria" title="Link diretto a Ispezione della memoria" translate="no">​</a></h2>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>x</td><td>x</td><td>x/<em>NFU</em> <em>addr</em></td><td>Mostra lo stato della memoria a partire dall&#x27;indirizzo <em>addr</em>, per le <em>N</em> locazioni di dimensione <em>U</em> e interpretate con il formato <em>F</em>. Comando con memoria, i valori di <em>N</em>, <em>F</em> e <em>U</em> possono essere omessi (insieme allo <code>/</code>) se uguali a prima.</td></tr></tbody></table>
 <p>Il comando <code>x</code> sta per <em>examine memory</em>, ma differenza degli altri non ha una versione estesa.</p>
 <p>Il parametro <em>N</em> si specifica come un numero intero, il valore di default (all&#x27;avvio di <code>gdb</code>) è 1.</p>
 <p>Il parametro <em>F</em> può essere</p>
 <ul>
-<li><code>x</code> per esadecimale</li>
-<li><code>d</code> per decimale</li>
-<li><code>c</code> per ASCII</li>
-<li><code>t</code> per binario</li>
-<li><code>s</code> per stringa delimitata da <code>0x00</code></li>
+<li class=""><code>x</code> per esadecimale</li>
+<li class=""><code>d</code> per decimale</li>
+<li class=""><code>c</code> per ASCII</li>
+<li class=""><code>t</code> per binario</li>
+<li class=""><code>s</code> per stringa delimitata da <code>0x00</code></li>
 </ul>
 <p>Il valore di default (all&#x27;avvio di <code>gdb</code>) è <code>x</code>.</p>
 <p>Il parametro <em>U</em> può essere</p>
 <ul>
-<li><code>b</code> per byte</li>
-<li><code>h</code> per word (2 byte)</li>
-<li><code>w</code> per long (4 byte)</li>
+<li class=""><code>b</code> per byte</li>
+<li class=""><code>h</code> per word (2 byte)</li>
+<li class=""><code>w</code> per long (4 byte)</li>
 </ul>
 <p>Il valore di default (all&#x27;avvio di <code>gdb</code>) è <code>h</code>.</p>
 <p>L&#x27;argomento <em>addr</em> può essere espresso in diversi modi, sia usando label che registri o espressioni basate su aritmetica dei puntatori.
 Per esempio:</p>
 <ul>
-<li>letterale esadecimale: <code>x 0x56559066</code></li>
-<li>label: <code>x &amp;label</code></li>
-<li>registro puntatore: <code>x $esi</code></li>
-<li>registro puntatore e registro indice: <code>x (char*)$esi + $ecx</code></li>
+<li class="">letterale esadecimale: <code>x 0x56559066</code></li>
+<li class="">label: <code>x &amp;label</code></li>
+<li class="">registro puntatore: <code>x $esi</code></li>
+<li class="">registro puntatore e registro indice: <code>x (char*)$esi + $ecx</code></li>
 </ul>
 <p>Notare che nell&#x27;ultimo caso, dato che ci si basa su aritmetica dei puntatori, il tipo all&#x27;interno del cast determina la <em>scala</em>, ossia la dimensione di ciascuna delle <code>$ecx</code> locazioni del vettore da saltare.
 Si può usare <code>(char*)</code> per 1 byte, <code>(short*)</code> per 2 byte, <code>(int*)</code> per 4 byte.</p>
 <p>Un alternativa a questo è lo scomporre, anche solo temporaneamente, le istruzioni con indirizzamento complesso. Per esempio, si può sostituire <code>movb (%esi, %ecx), %al</code> con <code>lea (%esi, %ecx), %ebx</code> seguita da <code>movb (%ebx), %al</code>, così che si possa eseguire semplicemente <code>x $ebx</code> nel debugger.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gestione-dei-breakpoints">Gestione dei breakpoints<a href="#gestione-dei-breakpoints" class="hash-link" aria-label="Link diretto a Gestione dei breakpoints" title="Link diretto a Gestione dei breakpoints" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gestione-dei-breakpoints">Gestione dei breakpoints<a href="#gestione-dei-breakpoints" class="hash-link" aria-label="Link diretto a Gestione dei breakpoints" title="Link diretto a Gestione dei breakpoints" translate="no">​</a></h2>
 <p>Oltre a crearli, i breakpoint possono anche essere rimossi o (dis)abilitati.
 Questi comandi si basano sulla conoscenza dell&#x27;<em>id</em> di un breakpoint: questo viene stampato quando un breakpoint viene creato o raggiunto durante l&#x27;esecuzione,oppure si possono ristampare tutti usando <code>info b</code>.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>info breakpoints</td><td>info b</td><td>info b [<em>id</em>]</td><td>Stampa informazioni sul breakpoint <em>id</em>, o tutti se l&#x27;argomento è omesso.</td></tr><tr><td>disable breakpoints</td><td>dis</td><td>dis [<em>id</em>]</td><td>Disabilita il breakpoint <em>id</em>, o tutti se l&#x27;argomento è omesso.</td></tr><tr><td>enable breakpoints</td><td>en</td><td>en [<em>id</em>]</td><td>Abilita il breakpoint <em>id</em>, o tutti se l&#x27;argomento è omesso.</td></tr><tr><td>delete breakpoints</td><td>d</td><td>d [<em>id</em>]</td><td>Rimuove il breakpoint <em>id</em>, o tutti se l&#x27;argomento è omesso.</td></tr></tbody></table>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conditional-breakpoints">Conditional Breakpoints<a href="#conditional-breakpoints" class="hash-link" aria-label="Link diretto a Conditional Breakpoints" title="Link diretto a Conditional Breakpoints" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="conditional-breakpoints">Conditional Breakpoints<a href="#conditional-breakpoints" class="hash-link" aria-label="Link diretto a Conditional Breakpoints" title="Link diretto a Conditional Breakpoints" translate="no">​</a></h3>
 <p>In alcuni casi, la complessità del programma, l&#x27;uso intensivo di sottoprogrammi o lunghi loop possono rendere molto lungo trovare il punto giusto dell&#x27;esecuzione.
 A questo scopo, è possibile definire dei <em>breakpoint condizionali</em>, per far sì che l&#x27;esecuzione si interrompa a tale breakpoint solo se la condiziona è verificata.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>condition</td><td>cond</td><td>cond <em>id</em> <em>cond</em></td><td>Imposta la condizione <em>cond</em> per il breakpoint <em>id</em>.</td></tr></tbody></table>
 <p>La sintassi per una condizione è in &quot;stile C&quot;, come il comando <code>x</code>.
 Alcuni esempi di questa sintassi:</p>
 <ul>
-<li><code>cond 2 $al==5</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se il registro <code>al</code> contiene il valore 5;</li>
-<li><code>cond 2 (short *)$edi==-5</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se il registro <code>edi</code> contiene l&#x27;indirizzo di una word di valore -5;</li>
-<li><code>cond 2 (int *)&amp;count!=0</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se la locazione di 4 byte a partire da <code>count</code> contiene un valore diverso da 0.</li>
+<li class=""><code>cond 2 $al==5</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se il registro <code>al</code> contiene il valore 5;</li>
+<li class=""><code>cond 2 (short *)$edi==-5</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se il registro <code>edi</code> contiene l&#x27;indirizzo di una word di valore -5;</li>
+<li class=""><code>cond 2 (int *)&amp;count!=0</code> per far sì che l&#x27;esecuzione si fermi al breakpoint 2 solo se la locazione di 4 byte a partire da <code>count</code> contiene un valore diverso da 0.</li>
 </ul>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Fare attenzione alle conversioni automatiche di rappresentazione: quando si usa la rappresentazione decimale, <code>gdb</code> interpreta automaticamente i valori come interi.
 Una condizione come <code>cond 2 $al==128</code>, per quanto accettata dal debugger, sarà sempre falsa perché la codifica <code>0x80</code> è interpretata in decimale come l&#x27;intero <code>-128</code>, mai come il naturale <code>128</code>.
 È quindi una buona idea usare la notazione esadecimale in casi del genere, cioè quando il bit più significativo è 1.</p></div></div>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>informazioni</div><div class="admonitionContent_BuS1"><p>Una feature disponibile in molti IDE è quello di creare dipendenze tra breakpoint, cioè abilitare un breakpoint solo se è stato prima colpito un altro.
-Questo però è <a href="https://stackoverflow.com/questions/36976573/gdb-breakpoint-that-breaks-only-after-a-different-breakpoint-is-hit" target="_blank" rel="noopener noreferrer">fin troppo ostico</a> da fare in <code>gdb</code>.</p></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="watchpoints">Watchpoints<a href="#watchpoints" class="hash-link" aria-label="Link diretto a Watchpoints" title="Link diretto a Watchpoints" translate="no">​</a></h3>
+Questo però è <a href="https://stackoverflow.com/questions/36976573/gdb-breakpoint-that-breaks-only-after-a-different-breakpoint-is-hit" target="_blank" rel="noopener noreferrer" class="">fin troppo ostico</a> da fare in <code>gdb</code>.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="watchpoints">Watchpoints<a href="#watchpoints" class="hash-link" aria-label="Link diretto a Watchpoints" title="Link diretto a Watchpoints" translate="no">​</a></h3>
 <p>I watchpoint sono come dei breapoint ma per dati (registri e memoria), non per il codice.
 Si creano indicando l&#x27;espressione del dato da controllare.
 Si gestiscono <em>con gli stessi comandi per i breakpoint</em>.</p>

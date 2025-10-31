@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-2024-25 docs-doc-page docs-doc-id-esercitazioni/Assembler/Ambiente" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
+<meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Ambiente | Esercitazioni di Reti Logiche</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Ambiente"><meta data-rh="true" property="og:locale" content="it"><meta data-rh="true" name="docusaurus_locale" content="it"><meta data-rh="true" name="docsearch:language" content="it"><meta data-rh="true" name="docusaurus_version" content="2024-25"><meta data-rh="true" name="docusaurus_tag" content="docs-default-2024-25"><meta data-rh="true" name="docsearch:version" content="2024-25"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-2024-25"><meta data-rh="true" property="og:title" content="Ambiente | Esercitazioni di Reti Logiche"><link data-rh="true" rel="icon" href="/reti-logiche-esercitazioni/img/favicon.png"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Ambiente"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Ambiente" hreflang="it"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Ambiente" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://X6QFHIGLL7-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assembler","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/category/assembler"},{"@type":"ListItem","position":2,"name":"Ambiente","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/2024-25/esercitazioni/Assembler/Ambiente"}]}</script><link rel="alternate" type="application/rss+xml" href="/reti-logiche-esercitazioni/blog/rss.xml" title="Esercitazioni di Reti Logiche RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/reti-logiche-esercitazioni/blog/atom.xml" title="Esercitazioni di Reti Logiche Atom Feed">
 
@@ -15,9 +15,9 @@
 
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e959b96b.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a3e2c5b4.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.23c25b27.js" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.60dc49c0.css">
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.3baf3929.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.40df8b3d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -28,7 +28,7 @@
 Useremo la sintassi <em>GAS</em> (anche nota come <em>AT&amp;T</em>), usando la linea di comando in un sistema Linux.
 Utilizzeremo degli script appositi per assemblare, testare e debuggare.
 Questi script non fanno che chiamare, semplificandone l&#x27;uso, <code>gcc</code> e <code>gdb</code>.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="attenzione-allarchitettura">Attenzione all&#x27;architettura<a href="#attenzione-allarchitettura" class="hash-link" aria-label="Link diretto a Attenzione all&#x27;architettura" title="Link diretto a Attenzione all&#x27;architettura" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attenzione-allarchitettura">Attenzione all&#x27;architettura<a href="#attenzione-allarchitettura" class="hash-link" aria-label="Link diretto a Attenzione all&#x27;architettura" title="Link diretto a Attenzione all&#x27;architettura" translate="no">​</a></h2>
 <p>Programmare in assembler vuol dire programmare per una specifica architettura di processori.
 L&#x27;architettura x86 è stata rimpiazzata nel tempo da x64, a 64 bit, che è del tutto retrocompatibile.
 Altre architetture (in particolare, ARM) hanno istruzioni, registri e funzionamento completamente diversi e non sono compatibili con x86.
@@ -36,28 +36,28 @@ Usare una macchina con architettura diversa è inevitabilmente fonte di problemi
 <p>Da una parte, si potrebbe pensare di esercitarsi scrivendo assembler per la propria architettura, anziché quella usata nel corso.
 Sorgono diversi problemi:</p>
 <ul>
-<li>dover imparare sintassi, meccanismi, registri completamente diversi;</li>
-<li>dover fare a meno o reingegnerizzarsi la libreria usata per l&#x27;input-output a terminale;</li>
-<li>dover comunque imparare l&#x27;assembler mostrato nel corso, perché quella sarà richiesta all&#x27;esame e supportata dalle macchine in laboratorio.</li>
+<li class="">dover imparare sintassi, meccanismi, registri completamente diversi;</li>
+<li class="">dover fare a meno o reingegnerizzarsi la libreria usata per l&#x27;input-output a terminale;</li>
+<li class="">dover comunque imparare l&#x27;assembler mostrato nel corso, perché quella sarà richiesta all&#x27;esame e supportata dalle macchine in laboratorio.</li>
 </ul>
 <p>La seconda opzione è usare strumenti di virtualizzazione capaci di far girare un sistema operativo con architettura diversa.
 Sorge come principale problema l&#x27;ergonomicità ed efficienza di questa soluzione, che dipende molto dagli strumenti che si trovano e dalle caratteristiche hardware della macchina, che potrebbero essere non sufficienti.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span><u>Nessun supporto diretto</u> per Mac con ARM</div><div class="admonitionContent_BuS1"><p>Più avanti, indichiamo specifiche generali dell&#x27;ambiente utile a costruirsene uno equivalente con diversi hardware/sistemi operativi, ma non offriamo supporto su come farlo in alcuna architettura diversa da quella ufficiale del corso (Windows 10/11 su x86/x64).</p><p>Non testiamo né supportiamo ambienti per Mac con ARM, che non abbiamo a disposizione.
-<em>Ci è stato detto</em> che <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer">UTM</a> può emulare l&#x27;architettura x86, affermazione che riportiamo senza alcuna garanzia.
-Non risponderemo a ulteriori domande a riguardo, soprattutto se parte delle <a href="/reti-logiche-esercitazioni/esercitazioni/Assembler/Problemi comuni">domande frequenti</a>.</p></div></div>
+<em>Ci è stato detto</em> che <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer" class="">UTM</a> può emulare l&#x27;architettura x86, affermazione che riportiamo senza alcuna garanzia.
+Non risponderemo a ulteriori domande a riguardo, soprattutto se parte delle <a class="" href="/reti-logiche-esercitazioni/esercitazioni/Assembler/Problemi comuni">domande frequenti</a>.</p></div></div>
 <p>Tenere comunque presente che, per i programmi che intendiamo scrivere, basta una macchina x86 molto <em>poco</em> potente.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>32 vs 64 bit</div><div class="admonitionContent_BuS1"><p>In realtà, i processori x86 a <em>soli</em> 32 bit non sono più in commercio da vent&#x27;anni.
 I processori che si trovano oggi sono x64, a 64 bit, e sono in grado di eseguire codice a 32 bit per retrocompatibilità.
 Nel corso, continuiamo a usare l&#x27;instruction set a 32 bit perché</p><ol>
-<li>è di complessità ridotta e sufficiente per i nostri scopi didattici,</li>
-<li>l&#x27;ambiente DOS, che qualcuno può trovare ancora utile, supporta <em>solo</em> x86.</li>
+<li class="">è di complessità ridotta e sufficiente per i nostri scopi didattici,</li>
+<li class="">l&#x27;ambiente DOS, che qualcuno può trovare ancora utile, supporta <em>solo</em> x86.</li>
 </ol></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="struttura-dellambiente">Struttura dell&#x27;ambiente<a href="#struttura-dellambiente" class="hash-link" aria-label="Link diretto a Struttura dell&#x27;ambiente" title="Link diretto a Struttura dell&#x27;ambiente" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="struttura-dellambiente">Struttura dell&#x27;ambiente<a href="#struttura-dellambiente" class="hash-link" aria-label="Link diretto a Struttura dell&#x27;ambiente" title="Link diretto a Struttura dell&#x27;ambiente" translate="no">​</a></h2>
 <p>I programmi che scriveremo ed eseguiremo, così come quelli utilizzati per assemblare, gireranno in un terminale Linux.</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Perché Linux?</div><div class="admonitionContent_BuS1"><p>Questo perché è molto più facile virtualizzare un ambiente Linux moderno in Windows o Mac che il contrario.
 In precedenza si usava MS-DOS, un sistema del 1981 facilmente emulabile, ma molto limitato data l&#x27;età.</p></div></div>
-<p>Nell&#x27;ambiente d&#x27;esame, si usa un Ubuntu 22.04 virtualizzato tramite <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener noreferrer">WSL</a> su macchina Windows 11.
-Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> con l&#x27;<a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener noreferrer">estensione per lo sviluppo in WSL</a>.</p>
+<p>Nell&#x27;ambiente d&#x27;esame, si usa un Ubuntu 22.04 virtualizzato tramite <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener noreferrer" class="">WSL</a> su macchina Windows 11.
+Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="">Visual Studio Code</a> con l&#x27;<a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener noreferrer" class="">estensione per lo sviluppo in WSL</a>.</p>
 <figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-wsl.drawio.png" style="max-width:min(100%, 24rem)" alt="
 Lo schema mostra un host Windows 11 (x86), che esegue sia l&#x27;editor VS Code che l&#x27;ambiente virtuale WSL2 (x86).
 All&#x27;interno di WSL2, il sistema operativo eseguito è Ubuntu 22.04.
@@ -68,8 +68,8 @@ L&#x27;host Windows 11 esegue sia l&#x27;editor VS Code che l&#x27;ambiente virt
 L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il terminale mostrato nell&#x27;editor è di Ubuntu, e non di Windows.
 "><figcaption><p>Schema dell&#x27;ambiente usato all&#x27;esame.</p></figcaption></figure>
 <p>Questo ci permette di mantenere un ambiente grafico moderno mentre si lavora con un terminare Linux virtualizzato.
-È anche relativamente facile da riprodurre in altri contesti, utilizzando altre forme di visualizzazione e <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer">SSH</a>.</p>
-<p>Tra i file del corso (Teams o <a href="http://docenti.ing.unipi.it/~a080368/Teaching/RetiLogiche/materiale.html" target="_blank" rel="noopener noreferrer">sito web</a>) trovate il pacchetto di installazione con le istruzioni passo-passo per riprodurre l&#x27;ambiente del laboratorio <u>su una macchina Windows 11 con architettura x86</u>: questo perché è pensata e testata per le macchine in laboratorio usate per l&#x27;esame.</p>
+È anche relativamente facile da riprodurre in altri contesti, utilizzando altre forme di visualizzazione e <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer" class="">SSH</a>.</p>
+<p>Tra i file del corso (Teams o <a href="http://docenti.ing.unipi.it/~a080368/Teaching/RetiLogiche/materiale.html" target="_blank" rel="noopener noreferrer" class="">sito web</a>) trovate il pacchetto di installazione con le istruzioni passo-passo per riprodurre l&#x27;ambiente del laboratorio <u>su una macchina Windows 11 con architettura x86</u>: questo perché è pensata e testata per le macchine in laboratorio usate per l&#x27;esame.</p>
 <p>Le stesse istruzioni possono essere adattate per riprodurre un ambiente funzionale in un contesto diverso.</p>
 <figure><img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/ambiente-ssh.drawio.png" style="max-width:min(100%, 38rem)" alt="
 Lo schema mostra due host distinti.
@@ -80,24 +80,24 @@ L&#x27;editor VS Code si collega al terminale dell&#x27;host linux utilizzando S
 I due host sono distinti, permettendo di eseguire sistemi operativi diversi.
 L&#x27;unico vincolo è la configurazione della connessione via SSH.
 "><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="requisiti-minimi">Requisiti minimi<a href="#requisiti-minimi" class="hash-link" aria-label="Link diretto a Requisiti minimi" title="Link diretto a Requisiti minimi" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requisiti-minimi">Requisiti minimi<a href="#requisiti-minimi" class="hash-link" aria-label="Link diretto a Requisiti minimi" title="Link diretto a Requisiti minimi" translate="no">​</a></h3>
 <p>L&#x27;ambiente Linux deve essere in grado di</p>
 <ul>
-<li>Eseguire gli script <code>powershell</code> dell&#x27;ambiente</li>
-<li>Assemblare, usando <code>gcc</code>, programmi x86 scritti con sintassi <em>GAS</em></li>
-<li>Eseguire programmi x86</li>
-<li>Debuggarli usando <code>gdb</code></li>
+<li class="">Eseguire gli script <code>powershell</code> dell&#x27;ambiente</li>
+<li class="">Assemblare, usando <code>gcc</code>, programmi x86 scritti con sintassi <em>GAS</em></li>
+<li class="">Eseguire programmi x86</li>
+<li class="">Debuggarli usando <code>gdb</code></li>
 </ul>
 <p>Per far questo su Ubuntu 22.04, i pacchetti da installare sono</p>
 <ul>
-<li><code>build-essential</code></li>
-<li><code>gcc-multilib</code></li>
-<li><code>gdb</code></li>
-<li><code>powershell</code> (<a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.4" target="_blank" rel="noopener noreferrer">guida</a>)</li>
+<li class=""><code>build-essential</code></li>
+<li class=""><code>gcc-multilib</code></li>
+<li class=""><code>gdb</code></li>
+<li class=""><code>powershell</code> (<a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.4" target="_blank" rel="noopener noreferrer" class="">guida</a>)</li>
 </ul>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Perché Powershell?</div><div class="admonitionContent_BuS1"><p>Perché Powershell (2006) è object-oriented, e permette di scrivere script leggibili e manutenibili, in modo semplice.
-Bash (1989) è invece text-oriented, con una <a href="https://mywiki.wooledge.org/BashPitfalls" target="_blank" rel="noopener noreferrer">lunga lista di trappole da saper evitare</a>.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma" translate="no">​</a></h2>
+Bash (1989) è invece text-oriented, con una <a href="https://mywiki.wooledge.org/BashPitfalls" target="_blank" rel="noopener noreferrer" class="">lunga lista di trappole da saper evitare</a>.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma" translate="no">​</a></h2>
 <p>Una volta eseguiti i passi dell&#x27;installazione, avremo una cartella <code>C:/reti_logiche</code> con contenuto come da figura.</p>
 <img src="/reti-logiche-esercitazioni/2024-25/img/assembler/ambiente/c-reti_logiche.png" style="max-width:min(100%, 14rem)" alt="Cartelle: assembler, verilog, dispense. Files: assembler.code-workspace, verilog.code-workspace, Istruzioni.txt">
 <p>Il file <code>assembler.code-workspace</code> lancerà VS Code, collegandosi alla macchina virtuale WSL e la cartella di lavoro <code>C:/reti_logiche/assembler</code>.</p>
