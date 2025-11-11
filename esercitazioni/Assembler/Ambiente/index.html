@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-2025-26 docs-doc-page docs-doc-id-esercitazioni/Assembler/Ambiente" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
+<meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Ambiente | Esercitazioni di Reti Logiche</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/esercitazioni/Assembler/Ambiente"><meta data-rh="true" property="og:locale" content="it"><meta data-rh="true" name="docusaurus_locale" content="it"><meta data-rh="true" name="docsearch:language" content="it"><meta data-rh="true" name="docusaurus_version" content="2025-26"><meta data-rh="true" name="docusaurus_tag" content="docs-default-2025-26"><meta data-rh="true" name="docsearch:version" content="2025-26"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-2025-26"><meta data-rh="true" property="og:title" content="Ambiente | Esercitazioni di Reti Logiche"><link data-rh="true" rel="icon" href="/reti-logiche-esercitazioni/img/favicon.png"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/esercitazioni/Assembler/Ambiente"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/esercitazioni/Assembler/Ambiente" hreflang="it"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/esercitazioni/Assembler/Ambiente" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://X6QFHIGLL7-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assembler","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/category/assembler"},{"@type":"ListItem","position":2,"name":"Ambiente","item":"https://your-docusaurus-site.example.com/reti-logiche-esercitazioni/esercitazioni/Assembler/Ambiente"}]}</script><link rel="alternate" type="application/rss+xml" href="/reti-logiche-esercitazioni/blog/rss.xml" title="Esercitazioni di Reti Logiche RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/reti-logiche-esercitazioni/blog/atom.xml" title="Esercitazioni di Reti Logiche Atom Feed">
 
@@ -15,9 +15,9 @@
 
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e959b96b.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.ceaefedd.js" defer="defer"></script>
-<script src="/reti-logiche-esercitazioni/assets/js/main.5290f217.js" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.60dc49c0.css">
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.56c36bc3.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/main.68788c86.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -28,15 +28,15 @@
 Useremo la sintassi <em>GAS</em> (anche nota come <em>AT&amp;T</em>), usando la linea di comando in un sistema Linux.
 Utilizzeremo degli script appositi per assemblare, testare e debuggare.
 Questi script non fanno che chiamare, semplificandone l&#x27;uso, <code>gcc</code> e <code>gdb</code>.</p>
-<p>Per istruzioni per installare e configurare il proprio ambiente, vedere <a href="/reti-logiche-esercitazioni/esercitazioni/Ambienti">qui</a>.
+<p>Per istruzioni per installare e configurare il proprio ambiente, vedere <a class="" href="/reti-logiche-esercitazioni/esercitazioni/Ambienti">qui</a>.
 Qui vedremo più da vicino il sistema utilizzato all&#x27;esame, basato su Windows 11 + WSL.</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Informazione a rischio aggiornamento</div><div class="admonitionContent_BuS1"><p>Fino all&#x27;A.A. 2024/25, <em>nei laboratori</em> si è utilizzato Windows + WSL come spiegato qui.
 Ciò è ancora <u>da confermare</u> per l&#x27;A.A. 2025/26.
 Ogni eventuale cambiamento sarà a impatto pratico minimo.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="struttura-dellambiente">Struttura dell&#x27;ambiente<a href="#struttura-dellambiente" class="hash-link" aria-label="Link diretto a Struttura dell&#x27;ambiente" title="Link diretto a Struttura dell&#x27;ambiente" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="struttura-dellambiente">Struttura dell&#x27;ambiente<a href="#struttura-dellambiente" class="hash-link" aria-label="Link diretto a Struttura dell&#x27;ambiente" title="Link diretto a Struttura dell&#x27;ambiente" translate="no">​</a></h2>
 <p>I programmi che scriveremo ed eseguiremo, così come quelli utilizzati per assemblare, gireranno in un terminale Linux.</p>
-<p>Nell&#x27;ambiente d&#x27;esame, si usa un Ubuntu 24.04 virtualizzato tramite <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener noreferrer">WSL</a> su macchina Windows 11.
-Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> con l&#x27;<a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener noreferrer">estensione per lo sviluppo in WSL</a>.</p>
+<p>Nell&#x27;ambiente d&#x27;esame, si usa un Ubuntu 24.04 virtualizzato tramite <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener noreferrer" class="">WSL</a> su macchina Windows 11.
+Come editor usiamo <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="">Visual Studio Code</a> con l&#x27;<a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank" rel="noopener noreferrer" class="">estensione per lo sviluppo in WSL</a>.</p>
 <figure><img src="/reti-logiche-esercitazioni/2025-26/img/assembler/ambiente/ambiente-wsl.drawio.png" style="max-width:min(100%, 24rem)" alt="
 Lo schema mostra un host Windows 11 (x86), che esegue sia l&#x27;editor VS Code che l&#x27;ambiente virtuale WSL2 (x86).
 All&#x27;interno di WSL2, il sistema operativo eseguito è Ubuntu 24.04.
@@ -46,7 +46,7 @@ L&#x27;host Windows 11 esegue sia l&#x27;editor VS Code che l&#x27;ambiente virt
 L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il terminale mostrato nell&#x27;editor è di Ubuntu, e non di Windows.
 "><figcaption><p>Schema dell&#x27;ambiente usato all&#x27;esame.</p></figcaption></figure>
 <p>Questo ci permette di mantenere un ambiente grafico moderno mentre si lavora con un terminale Linux virtualizzato.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lanciare-lambiente-e-primo-programma">Lanciare l&#x27;ambiente e primo programma<a href="#lanciare-lambiente-e-primo-programma" class="hash-link" aria-label="Link diretto a Lanciare l&#x27;ambiente e primo programma" title="Link diretto a Lanciare l&#x27;ambiente e primo programma" translate="no">​</a></h2>
 <p>Una volta eseguiti i passi dell&#x27;installazione, avremo una cartella <code>C:/reti_logiche</code> con contenuto come da figura.</p>
 <img src="/reti-logiche-esercitazioni/2025-26/img/assembler/ambiente/c-reti_logiche.png" style="max-width:min(100%, 18rem)" alt="Cartelle: assembler, verilog, dispense. Files: assembler-workspace.code-workspace, verilog-workspace.code-workspace, Istruzioni.txt">
 <p>Il file <code>assembler-workspace.code-workspace</code> lancerà VS Code, collegandosi alla macchina virtuale WSL e la cartella di lavoro <code>C:/reti_logiche/assembler</code>.</p>
