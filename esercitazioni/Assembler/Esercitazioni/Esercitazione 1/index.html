@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.e5f4893d.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.f920909e.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -29,7 +29,7 @@ Infatti, l&#x27;assemblatore fa molto poco: dopo aver sostituito le varie label 
 Questo binario è poi eseguito direttamente dal processore.
 Dato un algoritmo per risolvere un problema, i passi base di questo algoritmo <em>devono</em> essere istruzioni comprese dal processore, e siamo quindi limitati dall&#x27;hardware e le sue caratteristiche.</p>
 <p>Per esempio, dato che il processore non supporta <code>mov</code> da un indirizzo di memoria a un altro indirizzo di memoria, non possiamo fare questa operazione con una sola istruzione: dobbiamo invece scomporre in <code>mov src, %eax</code> <code>mov %eax, dest</code>, assicurandoci nel frattempo di non aver perso alcun dato importante prima contenuto in <code>%eax</code>.</p>
-<p>Per svolgere gli esercizi, bisogna quindi imparare a scomporre strutture di programmazione già note (come if-then-else, cicli, accesso a vettore) nelle operazioni elementari messe ad disposizione dal processore, usando il limitato numero di registri a disposizione al posto di variabili, e tenendo presente quali operazioni da fare con quali dati, senza un sistema di tipizzazione ad aiutarci.</p>
+<p>Per svolgere gli esercizi, bisogna quindi imparare a scomporre strutture di programmazione già note (come if-then-else, cicli, accesso a vettore) nelle operazioni elementari messe a disposizione dal processore, usando il limitato numero di registri a disposizione al posto di variabili, e tenendo presente quali operazioni da fare con quali dati, senza un sistema di tipizzazione ad aiutarci.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="premesse-per-programmi-nellambiente-del-corso">Premesse per programmi nell&#x27;ambiente del corso<a href="#premesse-per-programmi-nellambiente-del-corso" class="hash-link" aria-label="Link diretto a Premesse per programmi nell&#x27;ambiente del corso" title="Link diretto a Premesse per programmi nell&#x27;ambiente del corso" translate="no">​</a></h2>
 <p>Unica eccezione alla logica di cui sopra sono i sottoprogrammi di ingresso/uscita, forniti tramite <code>utility.s</code>:
 questi interagiscono con il terminale tramite il <em>kernel</em> usando il meccanismo delle <em>interruzioni</em>, concetti che avrete il tempo di esplorare in corsi successivi.

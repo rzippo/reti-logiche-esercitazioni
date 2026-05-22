@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.e5f4893d.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.f920909e.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@ Il secondo contiene invece delle reti combinatorie che si potranno assumere note
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Non tutti gli esercizi hanno una parte di sintesi di rete combinatoria, e quindi il file <code>reti_standard.v</code>.
 Inoltre, ciascun esercizio ha il <em>proprio</em> file <code>reti_standard.v</code>, che sarà diverso da quelli allegati ad altri esercizi.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="compilazione-e-simulazione">Compilazione e simulazione<a href="#compilazione-e-simulazione" class="hash-link" aria-label="Link diretto a Compilazione e simulazione" title="Link diretto a Compilazione e simulazione" translate="no">​</a></h2>
-<p>Sia <code>descrizione.v</code> il sorgente contenente la descrizione della rete sincronizzata da noi prodotto, e che vogliamo testare.</p>
+<p>Sia <code>descrizione.v</code> il sorgente contenente la descrizione della rete sincronizzata da noi prodotta, e che vogliamo testare.</p>
 <p>Si compila la simulazione con il comando da terminale <code>iverilog</code>.
 Il comando richiede come argomenti i file da compilare assieme.
 Di default, il binario prodotto si chiamerà <code>a.out</code>, mentre con l&#x27;opzione <code>-o nome</code> è possibile impostarne uno a scelta.
@@ -101,7 +101,7 @@ L&#x27;operatore è un semplice alias per <code>Start-Job</code>, e si può ovvi
 <p>Nelle testbench d&#x27;esame è (di solito) presente anche una <em>linea di errore</em> che permette di identificare subito i punti in cui la testbench ha trovato un errore.
 Questo è particolarmente utile per scorrere lunghe simulazioni.</p>
 <p>Queste linee sono realizzate nella testbench con una variabile <code>reg error</code> inizializzata a 0 e un blocco <code>always</code> che risponde ad ogni variazione di <code>error</code> per rimetterla a 0 dopo una breve attesa.
-Questa attesa breve ma non nulla fa sì che basti assegnare 1 ad <code>error</code> per ottenere un&#x27;impulso sulla linea, facilmente visibile.</p>
+Questa attesa breve ma non nulla fa sì che basti assegnare 1 ad <code>error</code> per ottenere un impulso sulla linea, facilmente visibile.</p>
 <p>In GTKWave, possiamo trovare il segnale <code>error</code> tra i <code>wire</code> e <code>reg</code> del modulo <code>testbench</code> (<em>non</em> in <code>dut</code>).
 Mostrando questo segnale, possiamo riconoscere i punti di errore come impulsi, come nell&#x27;esempio seguente.</p>
 <img src="/reti-logiche-esercitazioni/2024-25/img/verilog/3/error-line-perimetro.png" style="max-width:min(100%, 60rem)" alt="
