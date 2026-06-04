@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.f920909e.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.1d481090.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -39,7 +39,7 @@ Le altre notazioni che useremo sono <code>d</code> per decimale (<code>4&#x27;d7
 <p>Verilog automaticamente estende e tronca i letterali la cui parte valore è sovra o sottospecificata rispetto al numero di bit.
 Per esempio, <code>4&#x27;b0</code> viene automaticamente esteso a <code>4&#x27;b0000</code>, mentre <code>6&#x27;had</code> viene automaticamente troncato a <code>6&#x27;b101101</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operatori-aritmetici">Operatori aritmetici<a href="#operatori-aritmetici" class="hash-link" aria-label="Link diretto a Operatori aritmetici" title="Link diretto a Operatori aritmetici" translate="no">​</a></h2>
-<p>Il Verilog supporta molti degli operatori comuni, che possiamo usare in espressioni combinatorie: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>&lt;</code>, <code>&gt;</code> <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>.</p>
+<p>Il Verilog supporta molti degli operatori comuni, che possiamo usare in espressioni combinatorie: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>.</p>
 <p>Prestare attenzione, però, ai dimensionamenti in bit degli operandi e a come Verilog li estende per eseguire le operazioni.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operatori-logici-e-bitwise">Operatori logici e <em>bitwise</em><a href="#operatori-logici-e-bitwise" class="hash-link" aria-label="Link diretto a operatori-logici-e-bitwise" title="Link diretto a operatori-logici-e-bitwise" translate="no">​</a></h2>
 <p>Verilog supporta i classici operatori logici <code>&amp;&amp;</code>, <code>||</code> e <code>!</code>.
@@ -61,7 +61,7 @@ Sia per esempio <code>x</code> di valore <code>4&#x27;b0100</code>, allora la su
 Le riduzioni possono rendere alcune espressioni combinatorie più semplici da scrivere.</p>
 <table><thead><tr><th>Operatore</th><th>Tipo di riduzione</th></tr></thead><tbody><tr><td><code>&amp;</code></td><td>and</td></tr><tr><td><code>~&amp;</code></td><td>nand</td></tr><tr><td><code>|</code></td><td>or</td></tr><tr><td><code>~|</code></td><td>nor</td></tr><tr><td><code>^</code></td><td>xor</td></tr><tr><td><code>~^</code></td><td>xnor</td></tr></tbody></table>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operatore-di-selezione-">Operatore di selezione <code>[...]</code><a href="#operatore-di-selezione-" class="hash-link" aria-label="Link diretto a operatore-di-selezione-" title="Link diretto a operatore-di-selezione-" translate="no">​</a></h2>
-<p>Quando si dichiara un elemento, come un <code>wire</code>, si utilizza la notazione <code>[N:0]</code> per indicare l&#x27;elemento ha N+1 bit, indicizzati da 0 a N.
+<p>Quando si dichiara un elemento, come un <code>wire</code>, si utilizza la notazione <code>[N:0]</code> per indicare che l&#x27;elemento ha N+1 bit, indicizzati da 0 a N.
 Per esempio, per dichiarare un filo da 8 bit, scriveremo</p>
 <div class="language-verilog codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-verilog codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token declaration variable" style="color:#36acaa">wire</span><span class="token plain"> </span><span class="token brackets operator" style="color:#393A34">[</span><span class="token plain">7</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain">0</span><span class="token brackets operator" style="color:#393A34">]</span><span class="token plain"> x;</span><br></div></code></pre></div></div>
 <p>Possiamo poi utilizzare l&#x27;operatore per selezionare uno o più bit di un tale componente.
