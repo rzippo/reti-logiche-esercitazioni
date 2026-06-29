@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.6d5037eb.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a31ebde6.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@ All&#x27;ingresso di una porta logica, invece, viene rilevata la tensione senza 
 <img src="/reti-logiche-esercitazioni/2024-25/img/verilog/2/porte-logiche-1.drawio.png" style="max-width:min(100%, 36rem)" alt="
 Schema semplificato di come sono elettricamente collegate due porte logiche in serie.
 L&#x27;uscita di una porta è collegata o a terra (valore logico &#x27;0&#x27;) o a Vcc (valore logico &#x27;1&#x27;).
-L&#x27;ingresso di una porta non è collegata elettricamente alle sue uscite.
+L&#x27;ingresso di una porta non è collegato elettricamente alle sue uscite.
 ">
 <p>Cosa succede invece se colleghiamo le uscite di due porte logiche, in particolare se una produce 1 e l&#x27;altra 0?
 Si chiude un circuito che collega <em>Vcc</em> a <em>terra</em>.
@@ -59,7 +59,7 @@ Per dar fuoco al proprio circuito basta infatti scrivere:</p>
 <p>Ci sono qui due errori in tandem: si parte dall&#x27;idea che <code>rc_1</code> e <code>rc_2</code> lavorino in sequenza anziché in parallelo, come due righe distinte di un programma, e si arriva a collegare sia l&#x27;uscita di <code>rc_1</code> che <code>rc_2</code> allo stesso filo, creando il corto circuito.</p>
 <p>Dall&#x27;uso del simulatore Verilog questo problema non è sempre evidente: se due valori assegnati sono gli stessi, il simulatore &quot;lascia fare&quot; assegnando quel valore al filo, se invece i valori sono distinti il filo avrà valore logico indeterminato <code>1&#x27;bx</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uso-efficiente-di-vs-code">Uso efficiente di VS Code<a href="#uso-efficiente-di-vs-code" class="hash-link" aria-label="Link diretto a Uso efficiente di VS Code" title="Link diretto a Uso efficiente di VS Code" translate="no">​</a></h2>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Uso efficiente di VS Code</div><div class="admonitionContent_BuS1"><p>Questa parte della lezione copre l&#x27;uso efficiente di VS codice.
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Uso efficiente di VS Code</div><div class="admonitionContent_BuS1"><p>Questa parte della lezione copre l&#x27;uso efficiente di VS Code.
 Il materiale relativo si trova <a class="" href="/reti-logiche-esercitazioni/esercitazioni/VS-Code">qui</a>.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="esercizi-desame">Esercizi d&#x27;esame<a href="#esercizi-desame" class="hash-link" aria-label="Link diretto a Esercizi d&#x27;esame" title="Link diretto a Esercizi d&#x27;esame" translate="no">​</a></h2>
 <p>Negli esercizi d&#x27;esame dove compare la sintesi di reti combinatorie, questa è <em>parte</em> di un esercizio più ampio: si chiede di realizzare una rete sincronizzata che interagisce con l&#x27;esterno per raccogliere input, svolgere un calcolo, e inviare un risultato.
