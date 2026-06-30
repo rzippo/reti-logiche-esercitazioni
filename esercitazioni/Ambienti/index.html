@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a31ebde6.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.102b57ce.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -32,8 +32,8 @@ Per entrambi, utilizziamo un ambiente software che è lo stesso (o estremamente 
 Anche un editor da terminale come <code>nano</code> o <code>vim</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ambiente-assembler">Ambiente assembler<a href="#ambiente-assembler" class="hash-link" aria-label="Link diretto a Ambiente assembler" title="Link diretto a Ambiente assembler" translate="no">​</a></h2>
 <p>Programmare in assembler vuol dire programmare per una specifica architettura di processori.
-L&#x27;architettura x86 è stata rimpiazzata nel tempo da x64, a 64 bit, che è del tutto retrocompatibile.
-Altre architetture (in particolare, ARM) hanno istruzioni, registri e funzionamento completamente diversi e non sono compatibili con x86.
+L&#x27;architettura <code>x86</code> è stata rimpiazzata nel tempo da <code>x64</code>, a 64 bit, che è del tutto retrocompatibile.
+Altre architetture (in particolare, ARM) hanno istruzioni, registri e funzionamento completamente diversi e non sono compatibili con <code>x86</code>.
 Usare una macchina con architettura diversa è inevitabilmente fonte di problemi.</p>
 <p>L&#x27;ambiente fornito funziona con Linux <code>x86</code> (o <code>x64</code> o <code>amd64</code>, che significano la stessa cosa).
 Non funziona invece per processori <code>arm64</code>, come quelli usati da Mac o Windows on ARM.</p>
@@ -46,11 +46,11 @@ Sorgono diversi problemi:</p>
 </ul>
 <p>La seconda opzione è usare strumenti di virtualizzazione capaci di far girare un sistema operativo con architettura diversa.
 Sorge come principale problema l&#x27;ergonomicità ed efficienza di questa soluzione, che dipende molto dagli strumenti che si trovano e dalle caratteristiche hardware della macchina, che potrebbero essere non sufficienti.</p>
-<p>Per chi ha una macchina ARM, sarà necessario trovare soluzioni di virtualizzazione o usare un&#x27;altra macchina dedicata (va bene qualunque cosa di qualunque potenza, purché <code>x86</code>).
+<p>Per chi ha una macchina ARM, sarà necessario trovare soluzioni di virtualizzazione o usare una altra macchina dedicata (va bene qualunque cosa di qualunque potenza, purché <code>x86</code>).
 In ogni caso, <em>non offriamo nessun supporto diretto</em> a tali macchine.
 Lo ribadisco in rosso, perché chiesto spesso.</p>
 <div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span><u>Nessun supporto diretto</u> per Mac con ARM</div><div class="admonitionContent_BuS1"><p>Non testiamo né supportiamo ambienti per Mac con ARM, che non abbiamo a disposizione.
-<em>Ci è stato detto</em> che <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer" class="">UTM</a> può emulare l&#x27;architettura x86, affermazione che riportiamo senza alcuna garanzia.
+<em>Ci è stato detto</em> che <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer" class="">UTM</a> può emulare l&#x27;architettura <code>x86</code>, affermazione che riportiamo senza alcuna garanzia.
 Non risponderemo a ulteriori domande a riguardo, soprattutto se parte delle <a class="" href="/reti-logiche-esercitazioni/esercitazioni/Assembler/Problemi comuni">domande frequenti</a>.</p></div></div>
 <p>Oltre a questioni di architettura, abbiamo anche il sistema operativo, che è rilevante per gestire input e output da terminale.
 I programmi che scriveremo ed eseguiremo, così come quelli utilizzati per assemblare, gireranno in un terminale Linux.
@@ -61,11 +61,11 @@ In precedenza si usava MS-DOS, un sistema del 1981 facilmente emulabile, ma molt
 Per usarli però sono necessari comandi <em>lunghi</em>, che semplifichiamo usando script Powershell <code>assemble.ps1</code> e <code>debug.ps1</code>.</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Perché Powershell?</div><div class="admonitionContent_BuS1"><p>Perché Powershell (2006) è object-oriented, e permette di scrivere script leggibili e manutenibili, in modo semplice.
 Bash (1989) è invece text-oriented, con una <a href="https://mywiki.wooledge.org/BashPitfalls" target="_blank" rel="noopener noreferrer" class="">lunga lista di trappole da saper evitare</a>.</p></div></div>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>32 vs 64 bit</div><div class="admonitionContent_BuS1"><p>In realtà, i processori x86 a <em>soli</em> 32 bit non sono più in commercio da vent&#x27;anni.
-I processori che si trovano oggi sono x64, a 64 bit, e sono in grado di eseguire codice a 32 bit per retrocompatibilità.
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>32 vs 64 bit</div><div class="admonitionContent_BuS1"><p>In realtà, i processori <code>x86</code> a <em>soli</em> 32 bit non sono più in commercio da vent&#x27;anni.
+I processori che si trovano oggi sono <code>x64</code>, a 64 bit, e sono in grado di eseguire codice a 32 bit per retrocompatibilità.
 Nel corso, continuiamo ad usare l&#x27;instruction set a 32 bit perché</p><ol>
 <li class="">è di complessità ridotta e sufficiente per i nostri scopi didattici,</li>
-<li class="">il vecchio ambiente DOS, che qualcuno può trovare ancora utile, supporta <em>solo</em> x86.</li>
+<li class="">il vecchio ambiente DOS, che qualcuno può trovare ancora utile, supporta <em>solo</em> <code>x86</code>.</li>
 </ol></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ambiente-verilog">Ambiente Verilog<a href="#ambiente-verilog" class="hash-link" aria-label="Link diretto a Ambiente Verilog" title="Link diretto a Ambiente Verilog" translate="no">​</a></h2>
 <p>L&#x27;ambiente Verilog non ha i problemi di quello assembler, perché quel che compiliamo (una rete simulabile) non è legato al sistema operativo o all&#x27;architettura della CPU.
@@ -86,7 +86,7 @@ Le differenze riguardano solo aspetti di installazione e configurazione, il modo
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>suggerimento</div><div class="admonitionContent_BuS1"><p>Tenere presente che non c&#x27;è bisogno di utilizzare lo stesso tipo di pacchetto o macchina per assembler e Verilog, le due scelte sono indipendenti.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ambiente-per-windows-11--wsl2">Ambiente per Windows 11 + WSL2<a href="#ambiente-per-windows-11--wsl2" class="hash-link" aria-label="Link diretto a Ambiente per Windows 11 + WSL2" title="Link diretto a Ambiente per Windows 11 + WSL2" translate="no">​</a></h2>
 <p><a href="/reti-logiche-esercitazioni/2025-26/ambiente/reti-logiche-windows-2026-04-09.zip" target="_blank" rel="noopener noreferrer" class="">Download</a></p>
-<p>Questo pacchetto supporta macchine Windows 11 x64, utilizza WSL2 per virtualizzare un sistema Ubuntu 24.04 per assembler, e applicazioni native per Verilog.</p>
+<p>Questo pacchetto supporta macchine Windows 11 <code>x64</code>, utilizza WSL2 per virtualizzare un sistema Ubuntu 24.04 per assembler, e applicazioni native per Verilog.</p>
 <p>WSL2 è un sottosistema di Windows che permette di virtualizzare macchine Linux in modo semplice, e l&#x27;integrazione con VS Code tramite <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl" target="_blank" rel="noopener noreferrer" class="">l&#x27;estensione WSL</a> permette di scrivere codice <em>fuori</em> dalla macchina virtuale ed assemblare ed eseguire <em>dentro</em> la macchina virtuale.
 Questo ci permette di mantenere un ambiente grafico moderno mentre si lavora con un terminale Linux virtualizzato.</p>
 <figure><img src="/reti-logiche-esercitazioni/2025-26/img/assembler/ambiente/ambiente-wsl.drawio.png" style="max-width:min(100%, 24rem)" alt="
@@ -97,18 +97,18 @@ L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il ter
 L&#x27;host Windows 11 esegue sia l&#x27;editor VS Code che l&#x27;ambiente virtuale WSL2 (x86).
 L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il terminale mostrato nell&#x27;editor è di Ubuntu, e non di Windows.
 "><figcaption><p>Schema dell&#x27;ambiente usato all&#x27;esame.</p></figcaption></figure>
-<p>Il pacchetto dell&#x27;ambiente contiene le istruzioni passo passo per installare e configurare la macchina virtuale <u>su una macchina Windows 11 con architettura x86</u>.</p>
+<p>Il pacchetto dell&#x27;ambiente contiene le istruzioni passo passo per installare e configurare la macchina virtuale <u>su una macchina Windows 11 con architettura <code>x86</code></u>.</p>
 <p>Per l&#x27;ambiente Verilog, invece, ci sono sia installer precompilati <a href="https://bleyer.org/icarus/" target="_blank" rel="noopener noreferrer" class="">qui</a> che codice sorgente <a href="https://github.com/steveicarus/iverilog" target="_blank" rel="noopener noreferrer" class="">qui</a> e <a href="https://github.com/gtkwave/gtkwave" target="_blank" rel="noopener noreferrer" class="">qui</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ambiente-per-linux-nativo-o-devcontainer">Ambiente per Linux nativo <em>o</em> devcontainer<a href="#ambiente-per-linux-nativo-o-devcontainer" class="hash-link" aria-label="Link diretto a ambiente-per-linux-nativo-o-devcontainer" title="Link diretto a ambiente-per-linux-nativo-o-devcontainer" translate="no">​</a></h2>
 <p><a href="/reti-logiche-esercitazioni/2025-26/ambiente/reti-logiche-linux-devcontainer-2026-04-09.zip" target="_blank" rel="noopener noreferrer" class="">Download</a></p>
-<p>Questo pacchetto supporta due scenari: una macchina con Linux x64, oppure <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer" class="">devcontainers</a> tramite Docker.</p>
+<p>Questo pacchetto supporta due scenari: una macchina con Linux <code>x64</code>, oppure <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer" class="">devcontainers</a> tramite Docker.</p>
 <p>Il pacchetto contiene le cartelle <code>assembler</code> e <code>verilog</code> con i file necessari per scrivere codice.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="utilizzo-nativo">Utilizzo nativo<a href="#utilizzo-nativo" class="hash-link" aria-label="Link diretto a Utilizzo nativo" title="Link diretto a Utilizzo nativo" translate="no">​</a></h3>
 <p>Per assembler, l&#x27;ambiente Linux deve essere in grado di</p>
 <ul>
 <li class="">Eseguire gli script <code>powershell</code> dell&#x27;ambiente</li>
-<li class="">Assemblare, usando <code>gcc</code>, programmi x86 scritti con sintassi <em>GAS</em></li>
-<li class="">Eseguire programmi x86</li>
+<li class="">Assemblare, usando <code>gcc</code>, programmi <code>x86</code> scritti con sintassi <em>GAS</em></li>
+<li class="">Eseguire programmi <code>x86</code></li>
 <li class="">Debuggarli usando <code>gdb</code></li>
 </ul>
 <p>Per far questo su Ubuntu 24.04, i pacchetti da installare sono</p>
@@ -133,12 +133,12 @@ L&#x27;editor VS Code è collegato direttamente al sistema virtualizzato: il ter
 Di solito sono inclusi di default per installazioni Desktop, ma su installazioni minime (come l&#x27;immagine Docker di Ubuntu 24.04) vanno installati manualmente.</p></div></div>
 <p>Una volta installato il software richiesto, per sviluppare basterà aprire le cartelle con VS Code.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="utilizzo-tramite-devcontainer">Utilizzo tramite devcontainer<a href="#utilizzo-tramite-devcontainer" class="hash-link" aria-label="Link diretto a Utilizzo tramite devcontainer" title="Link diretto a Utilizzo tramite devcontainer" translate="no">​</a></h3>
-<p>I <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer" class=""><code>devcontainer</code></a> sono un&#x27;altra forma di virtualizzazione integrata in VS Code, basata su Docker anziché WSL.
+<p>I <a href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer" class=""><code>devcontainer</code></a> sono una altra forma di virtualizzazione integrata in VS Code, basata su Docker anziché WSL.
 Il pacchetto include, nelle cartelle <code>.devcontainer</code>, i <code>Dockerfile</code> che installano il software necessario su immagini Ubuntu 24.04.</p>
 <p>Una volta aperta la cartella con VS Code, usare il comando &quot;Riapri in devcontainer&quot;.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="alternative-fai-da-te">Alternative fai da te<a href="#alternative-fai-da-te" class="hash-link" aria-label="Link diretto a Alternative fai da te" title="Link diretto a Alternative fai da te" translate="no">​</a></h2>
-<p>Un&#x27;altra opzione molto utile di VS Code è lo sviluppo remoto tramite <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer" class=""><code>SSH</code></a> usando <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer" class="">questa estensione</a>.
-In questo caso, invece di collegarsi a un ambiente di sviluppo virtualizzato, questo risiede su un&#x27;altra macchina a cui ci si collega aprendo un terminale SSH.</p>
+<p>Una altra opzione molto utile di VS Code è lo sviluppo remoto tramite <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer" class=""><code>SSH</code></a> usando <a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer" class="">questa estensione</a>.
+In questo caso, invece di collegarsi a un ambiente di sviluppo virtualizzato, questo risiede su una altra macchina a cui ci si collega aprendo un terminale SSH.</p>
 <figure><img src="/reti-logiche-esercitazioni/2025-26/img/assembler/ambiente/ambiente-ssh.drawio.png" style="max-width:min(100%, 38rem)" alt="
 Lo schema mostra due host distinti.
 Il primo è l&#x27;host che esegue VS Code, che può essere di qualunque tipo e architettura.
@@ -148,7 +148,7 @@ L&#x27;editor VS Code si collega al terminale dell&#x27;host Linux utilizzando S
 I due host sono distinti, permettendo di eseguire sistemi operativi diversi.
 L&#x27;unico vincolo è la configurazione della connessione via SSH.
 "><figcaption><p>Schema di un ambiente che usa SSH.</p></figcaption></figure>
-<p>Da notare che le macchine sono distinte &quot;concettualmente&quot;: niente ci vieta di avere una macchina virtuale (e.g. VirtualBox) al posto di una macchina fisicamente distinta.</p>
+<p>Da notare che le macchine sono distinte &quot;concettualmente&quot;: niente ci vieta di avere una macchina virtuale (ad esempio VirtualBox) al posto di una macchina fisicamente distinta.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="testare-gli-ambienti">Testare gli ambienti<a href="#testare-gli-ambienti" class="hash-link" aria-label="Link diretto a Testare gli ambienti" title="Link diretto a Testare gli ambienti" translate="no">​</a></h2>
 <p>I pacchetti includono dei file per <em>testare</em> che l&#x27;ambiente sia utilizzabile.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="assembler">Assembler<a href="#assembler" class="hash-link" aria-label="Link diretto a Assembler" title="Link diretto a Assembler" translate="no">​</a></h3>

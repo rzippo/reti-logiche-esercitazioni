@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a31ebde6.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.102b57ce.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -61,10 +61,10 @@ In questo esercizio, dobbiamo accedere a due interfacce:</p>
 </ul>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Interfacce inutilizzate</div><div class="admonitionContent_BuS1"><p>Lo schema presentato dall&#x27;esercizio presenta anche una terza interfaccia, <code>C</code>.
 Il testo non dice cosa dovremmo farci.</p><p>Questo non dovrebbe sorprendere: lo spazio di I/O è <u>pensato</u> per collegare tante interfacce, in questo caso ben <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>16</mn></msup></mrow><annotation encoding="application/x-tex">2^{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">16</span></span></span></span></span></span></span></span></span></span></span></span> registri, che non siamo affatto obbligati a utilizzare.</p></div></div>
-<p>Ricordiamo che per leggere da un&#x27;interfaccia di ingresso senza handshake è sufficiente accedere in lettura al suo registro <code>RBR</code>.
-Invece, per leggere correttamente da un&#x27;interfaccia di ingresso con handshake abbiamo bisogno di leggere ripetutamente il suo registro <code>RSR</code> finché non troviamo l&#x27;apposito flag che segnala la validità del dato (flag <code>FI</code>, attivo alto).
+<p>Ricordiamo che per leggere da una interfaccia di ingresso senza handshake è sufficiente accedere in lettura al suo registro <code>RBR</code>.
+Invece, per leggere correttamente da una interfaccia di ingresso con handshake abbiamo bisogno di leggere ripetutamente il suo registro <code>RSR</code> finché non troviamo l&#x27;apposito flag che segnala la validità del dato (flag <code>FI</code>, attivo alto).
 Dopodiché, possiamo leggere il registro <code>RBR</code>.</p>
-<p>Dunque, l&#x27;attività che ha più senso astrarre sarà <em>leggere un registro di un&#x27;interfaccia</em>.</p>
+<p>Dunque, l&#x27;attività che ha più senso astrarre sarà <em>leggere un registro di una interfaccia</em>.</p>
 <p>Sappiamo che ciascun registro corrisponde a uno specifico <em>indirizzo</em> dello spazio di I/O, su 16 bit, e contiene 8 bit di dati.
 Abbiamo quindi bisogno di un microsottoprogramma che prende come argomento un indirizzo di 16 e restituisce come risultato gli 8 bit contenuti dal registro a quell&#x27;indirizzo.
 Mentre in un programma passiamo questi valori tramite variabili - in una RSS non possiamo che usare <em>registri appositi</em>.</p>
@@ -99,14 +99,14 @@ Possiamo quindi utilizzare <code>data</code> come solo in ingresso, senza bisogn
 L&#x27;aspetto chiave è il fatto che quando non si usano microsottoprogrammi, i valori assegnati a <code>STAR</code> sono sempre delle costanti, che come abbiamo visto possono essere sintetizzate usando una ROM.
 I salti che usano <code>MJR</code> invece no, perché, per l&#x27;appunto, usano un registro da cui viene letto il prossimo stato.</p>
 <p>Va quindi utilizzata una architettura <em>diversa</em>.
-Una di quelle viste nel corso è cos ì schematizzata.</p>
+Una di quelle viste nel corso è così schematizzata.</p>
 <img src="/reti-logiche-esercitazioni/2025-26/img/verilog/5/rom-microindirizzi-mjr.drawio.png" style="max-width:min(100%, 48rem)" alt="
 Schema di una ROM basata su microindirizzi con registro MJR.
-La ROM ha un&#x27;ulteriore uscita, &#x27;m_type&#x27;, che pilota un ulteriore multiplexer,
+La ROM ha una ulteriore uscita, &#x27;m_type&#x27;, che pilota un ulteriore multiplexer,
 che determina se &#x27;next_addr&#x27; va determinato con il meccanismo già visto (&#x27;m_true&#x27;, &#x27;m_false&#x27; e variabili di condizionamento) o se dovrà corrispondere a MJR.
 " title="
 Schema di una ROM basata su microindirizzi con registro MJR.
-La ROM ha un&#x27;ulteriore uscita, &#x27;m_type&#x27;, che pilota un ulteriore multiplexer,
+La ROM ha una ulteriore uscita, &#x27;m_type&#x27;, che pilota un ulteriore multiplexer,
 che determina se &#x27;next_addr&#x27; va determinato con il meccanismo già visto (&#x27;m_true&#x27;, &#x27;m_false&#x27; e variabili di condizionamento) o se dovrà corrispondere a MJR.
 ">
 <p>In questa architettura notiamo che si aggiunge un nuovo filo in uscita alla ROM per distinguere i salti (in)condizionati dai salti che leggono da <code>MJR</code>.
@@ -118,7 +118,7 @@ Possiamo quindi sintetizzare la parte controllo di questo esercizio con una ROM 
 <li class="">Salti condizionati a stati <em>costanti</em>, del tipo <code>STAR &lt;= c1 ? S0 : S1;</code>, da sintetizzare con <code>m-type = 0</code>, <code>c_eff = c1</code>, <code>m-true = S0</code>, <code>m-false = S1</code>.</li>
 <li class="">Salti incondizionati a <code>MJR</code>, del tipo <code>STAR &lt;= MJR;</code>, da sintetizzare con <code>m-type = 1</code>, <code>c_eff = X</code>, <code>m-true = X</code>, <code>m-false = X</code>.</li>
 </ul><p>Non sono sintetizzabili invece salti del tipo <code>STAR &lt;= c1 ? MJR : S1</code>.
-Per far questo ci vorrebbe un&#x27;altra architettura, <em>diversa</em> da quelle viste in questo corso.</p></div></div>
+Per far questo ci vorrebbe una altra architettura, <em>diversa</em> da quelle viste in questo corso.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="esercizio-51-esame-2024-01-26">Esercizio 5.1: esame 2024-01-26<a href="#esercizio-51-esame-2024-01-26" class="hash-link" aria-label="Link diretto a Esercizio 5.1: esame 2024-01-26" title="Link diretto a Esercizio 5.1: esame 2024-01-26" translate="no">​</a></h2>
 <p><a href="/reti-logiche-esercitazioni/2025-26/code/verilog/5/2024-01-26-ex2-congettura-collatz.zip" target="_blank" rel="noopener noreferrer" class="">Qui</a> testo e soluzione.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Provare da sé</div><div class="admonitionContent_BuS1"><p>Provare a svolgere da sé l&#x27;esercizio,  prima di guardare la soluzione o andare oltre per la discussione.</p></div></div>

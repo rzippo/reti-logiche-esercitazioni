@@ -16,7 +16,7 @@
 <link rel="search" type="application/opensearchdescription+xml" title="Esercitazioni di Reti Logiche" href="/reti-logiche-esercitazioni/opensearch.xml">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/reti-logiche-esercitazioni/assets/css/styles.e5c040c8.css">
-<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.a31ebde6.js" defer="defer"></script>
+<script src="/reti-logiche-esercitazioni/assets/js/runtime~main.102b57ce.js" defer="defer"></script>
 <script src="/reti-logiche-esercitazioni/assets/js/main.4ba398e6.js" defer="defer"></script>
 </head>
 <body>
@@ -33,7 +33,7 @@ Per altre opzioni e funzionalità del debugger, vedere la documentazione ufficia
 </blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="controllo-dellesecuzione">Controllo dell&#x27;esecuzione<a href="#controllo-dellesecuzione" class="hash-link" aria-label="Link diretto a Controllo dell&#x27;esecuzione" title="Link diretto a Controllo dell&#x27;esecuzione" translate="no">​</a></h2>
 <p>Per istruzione corrente si intende <em>la prossima da eseguire</em>.
-Quando il debugger si ferma a un&#x27;istruzione, si ferma <em>prima</em> di eseguirla.</p>
+Quando il debugger si ferma a una istruzione, si ferma <em>prima</em> di eseguirla.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>frame</td><td>f</td><td>f</td><td>Mostra l&#x27;istruzione corrente.</td></tr><tr><td>list</td><td>l</td><td>l</td><td>Mostra il sorgente attorno all&#x27;istruzione corrente.</td></tr><tr><td>break</td><td>b</td><td>b <em>label</em></td><td>Imposta un breakpoint alla prima istruzione dopo <em>label</em>.</td></tr><tr><td>continue</td><td>c</td><td>c</td><td>Prosegue l&#x27;esecuzione del programma fino al prossimo breakpoint.</td></tr><tr><td>step</td><td>s</td><td>s</td><td>Esegue l&#x27;istruzione corrente, fermandosi immediatamente dopo. Se l&#x27;istruzione corrente è una <code>call</code>, l&#x27;esecuzione si fermerà alla prima istruzione del sottoprogramma chiamato.</td></tr><tr><td>next</td><td>n</td><td>n</td><td>Esegue l&#x27;istruzione corrente, fermandosi all&#x27;istruzione successiva del sottoprogramma corrente. Se l&#x27;istruzione corrente è una <code>call</code>, l&#x27;esecuzione si fermerà	<em>dopo</em> il <code>ret</code> del sottoprogramma chiamato. Nota: aggiungere una <code>nop</code> dopo ogni <code>call</code> prima di una nuova label.</td></tr><tr><td>finish</td><td>fin</td><td>fin</td><td>Continua l&#x27;esecuzione fino all&#x27;uscita dal sottoprogramma corrente (<code>ret</code>). L&#x27;esecuzione si fermerà alla prima istruzione dopo la <code>call</code>.</td></tr><tr><td>run</td><td>r</td><td>r</td><td>Avvia (o riavvia) l&#x27;esecuzione del programma. Chiede conferma.</td></tr><tr><td>quit</td><td>q</td><td>q</td><td>Esce dal debugger. Chiede conferma.</td></tr></tbody></table>
 <p>I seguenti comandi sono <em>definiti ad hoc nell&#x27;ambiente del corso</em>, e non sono quindi tipici comandi di <code>gdb</code>.</p>
 <table><thead><tr><th>Nome completo</th><th>Nome scorciatoia</th><th>Formato</th><th>Comportamento</th></tr></thead><tbody><tr><td>rrun</td><td>rr</td><td>rr</td><td>Avvia (o riavvia) l&#x27;esecuzione del programma, senza chiedere conferma.</td></tr><tr><td>qquit</td><td>qq</td><td>qq</td><td>Esce dal debugger, senza chiedere conferma.</td></tr></tbody></table>
@@ -81,7 +81,7 @@ Per esempio:</p>
 </ul>
 <p>Notare che nell&#x27;ultimo caso, dato che ci si basa su aritmetica dei puntatori, il tipo all&#x27;interno del cast determina la <em>scala</em>, ossia la dimensione di ciascuna delle <code>$ecx</code> locazioni del vettore da saltare.
 Si può usare <code>(char*)</code> per 1 byte, <code>(short*)</code> per 2 byte, <code>(int*)</code> per 4 byte.</p>
-<p>Un alternativa a questo è lo scomporre, anche solo temporaneamente, le istruzioni con indirizzamento complesso. Per esempio, si può sostituire <code>movb (%esi, %ecx), %al</code> con <code>lea (%esi, %ecx), %ebx</code> seguita da <code>movb (%ebx), %al</code>, così che si possa eseguire semplicemente <code>x $ebx</code> nel debugger.</p>
+<p>Una alternativa a questo è lo scomporre, anche solo temporaneamente, le istruzioni con indirizzamento complesso. Per esempio, si può sostituire <code>movb (%esi, %ecx), %al</code> con <code>lea (%esi, %ecx), %ebx</code> seguita da <code>movb (%ebx), %al</code>, così che si possa eseguire semplicemente <code>x $ebx</code> nel debugger.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gestione-dei-breakpoints">Gestione dei breakpoints<a href="#gestione-dei-breakpoints" class="hash-link" aria-label="Link diretto a Gestione dei breakpoints" title="Link diretto a Gestione dei breakpoints" translate="no">​</a></h2>
 <p>Oltre a crearli, i breakpoint possono anche essere rimossi o (dis)abilitati.
 Questi comandi si basano sulla conoscenza dell&#x27;<em>id</em> di un breakpoint: questo viene stampato quando un breakpoint viene creato o raggiunto durante l&#x27;esecuzione, oppure si possono ristampare tutti usando <code>info b</code>.</p>
